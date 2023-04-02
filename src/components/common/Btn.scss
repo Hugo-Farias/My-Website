@@ -10,19 +10,19 @@
   text-transform: uppercase;
   line-height: 2.6rem;
   letter-spacing: 0.23rem;
-  //padding: 0 0.5rem;
   //border-bottom: 2px solid $color-primary;
-  border-bottom: 2px solid $color-primary;
-  overflow: hidden;
-  transition: all 0.2s;
-  background: linear-gradient(to bottom, transparent 50%, $color-primary 50%)
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: $color-primary;
+  text-underline-offset: 8px;
+  transition: background-position 0.2s;
+  background: linear-gradient(to bottom, transparent 50%, $color-primary 0%)
     no-repeat top;
-  background-size: 100% 200%;
+  background-size: auto 202%;
 
   &:hover {
     cursor: pointer;
-    //color: $color-primary;
-    //border-bottom: 20px solid $color-primary;
     background-position: bottom;
+    //background-color: $color-primary;
   }
 }

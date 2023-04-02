@@ -27,6 +27,8 @@ const ProjectCard: React.FC<PropsT> = function ({ data }) {
     <div
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
+      onFocus={() => setIsHover(true)}
+      onBlur={() => setIsHover(false)}
       className={`project-card ${isHover ? "hover" : ""}`}
     >
       <img src={imageUrl} alt={`Image ${image}`} className="async-image" />

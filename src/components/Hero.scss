@@ -25,10 +25,14 @@
       line-height: 4rem;
 
       & > .name {
-        //color: $color-primary;
-        border-bottom: 2px solid $color-primary;
-        display: inline-block;
-        margin-bottom: -10px;
+        text-transform: capitalize;
+        text-decoration: underline;
+        text-decoration-color: $color-primary;
+        text-decoration-thickness: 4px;
+        //background-image: linear-gradient(
+        //  top right $color-primary,
+        //  bottom left $color-secondary
+        //);
       }
 
       @media (min-width: $screen-small) {

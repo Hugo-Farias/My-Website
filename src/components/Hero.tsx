@@ -11,8 +11,7 @@ const Hero = function () {
       <section className="hero">
         <div className="greeting">
           <h1 className="introduction">
-            Hello there,
-            <br /> welcome to my site.
+            Welcome to my site.
             <br /> I'm <span className="name">{fullName}</span>.
           </h1>
 

@@ -26,10 +26,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin-bottom: 4rem;
-
-  @media (min-width: $screen-small) {
-    background-position: right 50vw top 12.4rem, right 50vw top 30vh;
-  }
 }
 
 a {
