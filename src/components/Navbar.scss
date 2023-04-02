@@ -16,9 +16,15 @@ $icon-list: github, frontend-mentor, linkedin, twitter;
   }
 
   & .name {
+    display: inline-flex;
+    text-transform: lowercase;
     z-index: inherit;
     font-size: 2.4rem;
     font-weight: bold;
+
+    & .last-name {
+      color: $color-primary;
+    }
   }
 
   & > .socials {

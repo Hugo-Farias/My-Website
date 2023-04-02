@@ -14,7 +14,7 @@
   & .info {
     & > .name {
       font-size: 2.4rem;
-      text-transform: uppercase;
+      text-transform: capitalize;
     }
 
     & > .tech-container {

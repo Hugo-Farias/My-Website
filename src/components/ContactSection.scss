@@ -2,11 +2,12 @@
 
 .contact-section {
   $offset: 35;
+  $contact-bg: rgba(black, 20%);
   @include flex-center;
   flex-direction: column;
   gap: 6rem;
-  background-color: $color-secondary;
-  box-shadow: 0 0 0 100vmax $color-secondary;
+  background-color: $contact-bg;
+  box-shadow: 0 0 0 100vmax $contact-bg;
   clip-path: inset(0 -100vmax -100vmax -100vmax);
   text-align: center;
   margin-left: -#{$offset}rem;

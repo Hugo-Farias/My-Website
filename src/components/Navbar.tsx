@@ -6,11 +6,12 @@ import { ReactComponent as LinkedinLogo } from "../assets/images/icon-linkedin.s
 import { ReactComponent as TwitterLogo } from "../assets/images/icon-twitter.svg";
 
 const Navbar = function () {
-  const fullName = (firstName + lastName).toLowerCase();
-
   return (
     <nav className="nav">
-      <div className="name">{fullName}</div>
+      <div className="name">
+        <div className="first-name">{firstName}</div>
+        <div className="last-name">{lastName}</div>
+      </div>
       <div className="socials">
         <a href="">
           <GithubLogo className="icon icon-github" />
