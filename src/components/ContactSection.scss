@@ -1,0 +1,42 @@
+@import "../variables";
+
+.contact-section {
+  $offset: 35;
+  @include flex-center;
+  flex-direction: column;
+  gap: 6rem;
+  background-color: $color-secondary;
+  box-shadow: 0 0 0 100vmax $color-secondary;
+  clip-path: inset(0 -100vmax -100vmax -100vmax);
+  text-align: center;
+  margin-left: -#{$offset}rem;
+  padding: 6rem 0 0 #{$offset}rem;
+  @include image("../assets/images/pattern-rings.svg");
+  background-position: left 0 bottom 3rem;
+  background-clip: padding-box;
+
+  @media (min-width: $screen-big) {
+    flex-direction: unset;
+    align-items: flex-start;
+    text-align: unset;
+  }
+
+  & .cta-container {
+    & :first-child {
+      margin-block: 1.5rem;
+    }
+  }
+
+  //min-width: 34.3rem;
+  & form {
+    @include flex-center;
+    width: 90%;
+    max-width: 44.5rem;
+    flex-direction: column;
+    gap: 2rem;
+
+    & :last-child {
+      align-self: flex-end;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "../variables";
+
+.project-card {
+  position: relative;
+  padding: 3rem 1rem 0 1rem;
+  //max-width: 34rem;
+
+  & > .async-image {
+    transition: filter 0.2s;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  & .info {
+    & > .name {
+      font-size: 2.4rem;
+      text-transform: uppercase;
+    }
+
+    & > .tech-container {
+      @include flex-center;
+      margin-top: 1rem;
+      margin-bottom: 1.3rem;
+      gap: 2rem;
+      justify-content: flex-start;
+      & > .tech {
+        color: $color-gray;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  & .buttons {
+    display: flex;
+    gap: 3rem;
+    & button {
+      margin-top: 1.3rem;
+    }
+  }
+
+  @media (min-width: $screen-medium) {
+    & .buttons {
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -80%);
+      flex-direction: column;
+    }
+
+    &.hover .async-image {
+      filter: brightness(30%);
+    }
+
+    &.hover .buttons {
+      opacity: 1;
+    }
+  }
+}

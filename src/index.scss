@@ -1,0 +1,67 @@
+@import "variables";
+
+:root {
+  background-color: $color-background;
+  color: $color-font;
+
+  font-family: Space, system-ui;
+
+  font-size: 10px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  margin-bottom: 4rem;
+
+  @media (min-width: $screen-small) {
+    background-position: right 50vw top 12.4rem, right 50vw top 30vh;
+  }
+}
+
+a {
+  color: $color-font;
+  text-decoration: none;
+  transition: color 0.3s;
+  &:hover,
+  &:active {
+    color: $color-primary;
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+h2 {
+  font-size: 6.8rem;
+  @media (max-width: $screen-small) {
+    font-size: 5rem;
+  }
+}
+
+p {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: $color-gray;
+
+  @media (min-width: $screen-small) {
+    font-size: 1.8rem;
+    max-width: 50rem;
+  }
+}

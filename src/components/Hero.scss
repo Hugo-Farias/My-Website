@@ -1,0 +1,96 @@
+@import "../variables";
+
+.hero {
+  $offset-top: 6.4;
+  //$offset-right: 20;
+  $offset-left: 25;
+  margin: -#{$offset-top}rem 0 0 -#{$offset-left}rem;
+  padding: #{$offset-top}rem 0 0 #{$offset-left}rem;
+
+  position: relative;
+  @include flex-center;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center;
+  @include image("../assets/images/pattern-rings.svg");
+  background-position: left 0 top 8.4rem;
+
+  @media (min-width: $screen-small) {
+    gap: unset;
+    min-height: 60rem;
+    flex-direction: row-reverse;
+    flex-wrap: unset;
+    text-align: unset;
+  }
+
+  & .photo {
+    $offset: 0;
+    z-index: 0;
+    //margin-top: -#{$offset}rem;
+    //backdrop-filter: blur(1rem);
+    @include image("../assets/images/image-profile-mobile.webp");
+    background-size: contain;
+    width: 17.4rem;
+    height: 38.3rem;
+
+    @media (max-width: $screen-small) {
+      //background-color: red;
+      margin-top: -8rem;
+    }
+
+    @media (min-width: $screen-small) {
+      backdrop-filter: none;
+      position: absolute;
+      margin-right: -2.2rem;
+      top: 0;
+      right: 0;
+      @include image("../assets/images/image-profile-tablet.webp");
+      background-position: right;
+      width: 32rem;
+      //height: #{60 - $offset}rem;
+      height: 60rem;
+    }
+
+    @media (min-width: $screen-medium) {
+      @include image("../assets/images/image-profile-desktop.webp");
+      //width: 44.5rem;
+      margin-right: 0;
+      margin-top: -3.8rem;
+      //margin-top: #{offset-top}rem;
+      //height: #{$offset - 72}rem;
+    }
+  }
+
+  & .greeting {
+    //margin-right: auto;
+    z-index: 1;
+    max-width: 36rem;
+
+    @media (min-width: $screen-small) {
+      width: 73vw;
+      max-width: 71rem;
+      margin-right: auto;
+    }
+
+    & .introduction {
+      font-weight: 700;
+      font-size: 3.3rem;
+      line-height: 4rem;
+
+      & > .name {
+        display: inline-block;
+        border-bottom: 2px solid $color-primary;
+        margin-bottom: -2px;
+      }
+
+      @media (min-width: $screen-small) {
+        font-size: 7.2rem;
+        line-height: 7.2rem;
+      }
+    }
+
+    & .description {
+      padding: 3rem 0;
+    }
+  }
+}

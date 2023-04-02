@@ -1,0 +1,20 @@
+@import "../../variables";
+
+.button {
+  transition: color 0.3s;
+  margin: 0;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $color-font;
+  text-transform: uppercase;
+  line-height: 2.6rem;
+  letter-spacing: 0.23rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid $color-primary;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-primary;
+  }
+}

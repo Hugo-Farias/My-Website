@@ -1,0 +1,47 @@
+@import "../variables";
+
+$icon-list: github, frontend-mentor, linkedin, twitter;
+
+.nav {
+  @include flex-center;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  z-index: 5;
+
+  @media (min-width: $screen-small) {
+    flex-direction: unset;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+  }
+
+  & .name {
+    z-index: inherit;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+
+  & > .socials {
+    padding-inline: 2rem;
+    z-index: inherit;
+    @include flex-center;
+    gap: 2.5rem;
+
+    .icon {
+      height: 2.5rem;
+      width: 2.5rem;
+      transition: all 0.3s;
+
+      @each $icon in $icon-list {
+        &-#{$icon} {
+          @include image("../assets/images/icon-#{$icon}.svg");
+          fill: white;
+
+          &:hover {
+            fill: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}

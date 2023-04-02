@@ -1,0 +1,13 @@
+@import "../../variables";
+
+.separator {
+  margin: 6rem auto 4rem auto;
+  background-color: $color-font;
+  height: 2px;
+  width: 100%;
+  opacity: 0.4;
+}
+
+.hidden {
+  background-color: transparent;
+}
