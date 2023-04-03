@@ -7,11 +7,15 @@
   //padding: 3rem 0 0 0;
   //max-width: 34rem;
 
-  & > .async-image {
-    //border-radius: 1rem;
-    transition: filter 0.2s, transform 0.2s;
-    max-width: 100%;
+  & .image-wrapper {
+    display: flex;
+    overflow: hidden;
     margin-bottom: 1rem;
+    border-radius: 1rem;
+    & > .async-image {
+      transition: filter 0.2s, transform 0.2s;
+      max-width: 100%;
+    }
   }
 
   & .info {
@@ -55,7 +59,8 @@
 
     &.hover .async-image {
       filter: brightness(30%) blur(3px);
-      transform: scale(1.05);
+      transform: scale(1.07);
+      //transform: scale(2.05);
     }
 
     &.hover .buttons {

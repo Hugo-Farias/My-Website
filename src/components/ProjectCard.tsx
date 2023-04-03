@@ -31,7 +31,9 @@ const ProjectCard: React.FC<PropsT> = function ({ data }) {
       onBlur={() => setIsHover(false)}
       className={`project-card ${isHover ? "hover" : ""}`}
     >
-      <img src={imageUrl} alt={`Image ${image}`} className="async-image" />
+      <div className="image-wrapper">
+        <img src={imageUrl} alt={`Image ${image}`} className="async-image" />
+      </div>
       <div className="info">
         <h4 className="name">{name}</h4>
         <div className="tech-container">
