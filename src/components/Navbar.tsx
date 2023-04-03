@@ -14,16 +14,16 @@ const Navbar = function () {
       </div>
       <div className="socials">
         <a href="">
-          <GithubLogo className="icon icon-github" />
+          <GithubLogo className="icon-github" />
         </a>
         <a href="">
-          <FrontEndMentorLogo className="icon icon-frontend-mentor" />
+          <FrontEndMentorLogo className="icon-frontend-mentor" />
         </a>
         <a href="">
-          <LinkedinLogo className="icon icon-linkedin" />
+          <LinkedinLogo className="icon-linkedin" />
         </a>
         <a href="">
-          <TwitterLogo className="icon icon-twitter" />
+          <TwitterLogo className="icon-twitter" />
         </a>
       </div>
     </nav>

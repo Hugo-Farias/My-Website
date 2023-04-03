@@ -28,12 +28,11 @@ $icon-list: github, frontend-mentor, linkedin, twitter;
   }
 
   & > .socials {
-    padding-inline: 2rem;
     z-index: inherit;
     @include flex-center;
     gap: 2.5rem;
 
-    .icon {
+    a {
       height: 2.5rem;
       width: 2.5rem;
       transition: all 0.3s;

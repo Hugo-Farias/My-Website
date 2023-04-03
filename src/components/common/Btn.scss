@@ -12,9 +12,9 @@
   letter-spacing: 0.23rem;
   border-bottom: 2px solid $color-primary;
   transition: background-position 0.2s;
-  background: linear-gradient(to bottom, transparent 50%, $color-primary 0%)
+  background: linear-gradient(to bottom, transparent 50%, $color-primary 2%)
     no-repeat top;
-  background-size: auto 202%;
+  background-size: auto 200%;
 
   &:hover,
   &:focus {
