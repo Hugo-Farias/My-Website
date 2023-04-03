@@ -37,16 +37,11 @@ $icon-list: github, frontend-mentor, linkedin, twitter;
       height: 2.5rem;
       width: 2.5rem;
       transition: all 0.3s;
+      fill: white;
 
-      @each $icon in $icon-list {
-        &-#{$icon} {
-          @include image("../assets/images/icon-#{$icon}.svg");
-          fill: white;
-
-          &:hover {
-            fill: $color-primary;
-          }
-        }
+      &:hover {
+        //fill: $color-primary;
+        fill: $color-primary;
       }
     }
   }

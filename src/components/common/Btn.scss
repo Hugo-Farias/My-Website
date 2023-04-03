@@ -10,17 +10,14 @@
   text-transform: uppercase;
   line-height: 2.6rem;
   letter-spacing: 0.23rem;
-  //border-bottom: 2px solid $color-primary;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-decoration-color: $color-primary;
-  text-underline-offset: 8px;
+  border-bottom: 2px solid $color-primary;
   transition: background-position 0.2s;
   background: linear-gradient(to bottom, transparent 50%, $color-primary 0%)
     no-repeat top;
   background-size: auto 202%;
 
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
     background-position: bottom;
     //background-color: $color-primary;

@@ -1,13 +1,41 @@
 @import "../variables";
 
 .hero {
-  $offset-right: 20;
-  $offset-left: 25;
-  margin: 3rem 0 0 -#{$offset-left}rem;
-  padding-left: #{$offset-left}rem;
+  position: relative;
+  //overflow-x: hidden;
+  $offset-right: 0;
+  $offset-left: 0;
+  margin: 0 -#{$offset-right}rem 0 -#{$offset-left}rem;
+  padding: 5rem #{$offset-right}rem 0 #{$offset-left}rem;
   text-align: center;
-  //background-image: conic-gradient();
-  //background-position: left 0 top 8.4rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: rgba($color-primary, 30%);
+    //background-position: left 0;
+    z-index: -999;
+    filter: blur(30rem);
+    left: -20rem;
+    top: 50rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30rem;
+    aspect-ratio: 1/2;
+    filter: blur(30rem);
+    border-radius: 50%;
+    background-color: rgba($color-secondary, 90%);
+    //background-position: left 0;
+    z-index: -999;
+    right: 0;
+    top: 0;
+  }
 
   & .greeting {
     @include flex-center;
@@ -29,10 +57,6 @@
         text-decoration: underline;
         text-decoration-color: $color-primary;
         text-decoration-thickness: 4px;
-        //background-image: linear-gradient(
-        //  top right $color-primary,
-        //  bottom left $color-secondary
-        //);
       }
 
       @media (min-width: $screen-small) {

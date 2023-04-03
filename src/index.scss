@@ -33,8 +33,10 @@ a {
   text-decoration: none;
   transition: color 0.3s;
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     color: $color-primary;
+    fill: $color-primary;
   }
 }
 
