@@ -2,11 +2,14 @@
 
 .project-card {
   position: relative;
-  padding: 3rem 1rem 0 1rem;
+  margin-top: 2rem;
+  overflow: hidden;
+  //padding: 3rem 0 0 0;
   //max-width: 34rem;
 
   & > .async-image {
-    transition: filter 0.2s;
+    //border-radius: 1rem;
+    transition: filter 0.2s, transform 0.2s;
     max-width: 100%;
     margin-bottom: 1rem;
   }
@@ -51,7 +54,8 @@
     }
 
     &.hover .async-image {
-      filter: brightness(30%);
+      filter: brightness(30%) blur(3px);
+      transform: scale(1.05);
     }
 
     &.hover .buttons {
