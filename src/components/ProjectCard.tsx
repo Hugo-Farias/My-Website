@@ -14,7 +14,7 @@ const ProjectCard: React.FC<PropsT> = function ({ data }) {
 
   useEffect(() => {
     const loadImage = async function (imageName: string): Promise<string> {
-      const res = await import(`../assets/images/${imageName}.webp`);
+      const res = await import(`../assets/images/${imageName}`);
       return res.default;
     };
 

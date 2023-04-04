@@ -17,6 +17,7 @@ const SkillsSection = function () {
   const contentJSX = DUMMY_DATA.map((v, i) => {
     return (
       <div key={i} className="skill-card">
+        <img src={`../assets/images/skills${v.image}`} alt="" />
         <h3 className="name">{v.name}</h3>
       </div>
     );
