@@ -1,20 +1,15 @@
 @import "../variables";
 
 .contact-section {
-  $offset: 35;
   $contact-bg: rgba(black, 20%);
+  padding-top: 6rem;
+  text-align: center;
   @include flex-center;
   flex-direction: column;
   gap: 6rem;
   background-color: $contact-bg;
   box-shadow: 0 0 0 100vmax $contact-bg;
   clip-path: inset(0 -100vmax -100vmax -100vmax);
-  text-align: center;
-  margin-left: -#{$offset}rem;
-  padding: 6rem 0 0 #{$offset}rem;
-  @include image("../assets/images/pattern-rings.svg");
-  background-position: left 0 bottom 3rem;
-  background-clip: padding-box;
 
   @media (min-width: $screen-big) {
     flex-direction: unset;

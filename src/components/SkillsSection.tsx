@@ -2,30 +2,33 @@ import "./SkillsSection.scss";
 import Separator from "./common/Separator";
 
 const DUMMY_DATA = [
-  { name: "HTML", years: 4 },
-  { name: "CSS", years: 4 },
-  { name: "Javacript", years: 4 },
-  { name: "Accessibility", years: 4 },
-  { name: "React", years: 3 },
-  { name: "Sass", years: 3 },
+  { name: "HTML", image: "html" },
+  { name: "CSS", image: "css" },
+  { name: "Javacript", image: "javacript" },
+  { name: "Typescript", image: "typescript" },
+  { name: "React", image: "react" },
+  { name: "SASS/SCSS", image: "sass" },
+  { name: "Python", image: "python" },
+  { name: "Git", image: "git" },
+  { name: "Bash", image: "bash" },
 ];
 
 const SkillsSection = function () {
   const contentJSX = DUMMY_DATA.map((v, i) => {
     return (
       <div key={i} className="skill-card">
-        <h2 className="name">{v.name}</h2>
-        <h3 className="years">
-          {v.years} {`Year${v.years > 1 ? "s" : ""}`} Experience
-        </h3>
+        <h3 className="name">{v.name}</h3>
       </div>
     );
   });
 
   return (
     <>
-      <section className="skills-section">{contentJSX}</section>
-      <Separator hide={false} />
+      <section className="skills-section">
+        <h2 className="skills-section-title">Skills</h2>
+        <div className="skills-grid">{contentJSX}</div>
+      </section>
+      <Separator />
     </>
   );
 };

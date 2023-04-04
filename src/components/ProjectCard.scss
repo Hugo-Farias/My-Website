@@ -53,9 +53,12 @@
     & .buttons {
       opacity: 0;
       position: absolute;
-      top: 50%;
+      //half of image-wrapper container at full size, or 40.5% of the entire card container
+      //top: 175.5545px;
+      //
+      top: 40.5%;
       left: 50%;
-      transform: translate(-50%, -90%);
+      transform: translate(-50%, -50%);
       flex-direction: column;
     }
 
