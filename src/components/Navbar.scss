@@ -28,17 +28,19 @@ $icon-list: github, frontend-mentor, linkedin, twitter;
   }
 
   & > .socials {
-    z-index: inherit;
     @include flex-center;
+    z-index: inherit;
     gap: 2.5rem;
 
     a {
+      @include flex-center;
       height: 2.5rem;
       width: 2.5rem;
       transition: all 0.3s;
       fill: white;
 
-      &:hover {
+      &:hover,
+      &:focus {
         //fill: $color-primary;
         fill: $color-primary;
       }

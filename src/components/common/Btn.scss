@@ -10,9 +10,9 @@
   text-transform: uppercase;
   line-height: 2.6rem;
   letter-spacing: 0.23rem;
-  border-bottom: 2px solid $color-primary;
+  //border-bottom: 2px solid $color-primary;
   transition: background-position 0.2s;
-  background: linear-gradient(to bottom, transparent 50%, $color-primary 2%)
+  background: linear-gradient(to bottom, transparent 48%, $color-primary 5%)
     no-repeat top;
   background-size: auto 200%;
 
