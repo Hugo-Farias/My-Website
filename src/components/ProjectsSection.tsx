@@ -5,32 +5,38 @@ import Separator from "./common/Separator";
 const DUMMY_DATA = [
   {
     name: "design portfolio",
-    image: "thumbnail-project-1-large.webp",
+    image: "thumbnail-project-1-large",
+    imageExt: "webp",
     tech: ["html", "css"],
   },
   {
     name: "e-learning landing page",
-    image: "thumbnail-project-2-large.webp",
+    image: "thumbnail-project-2-large",
+    imageExt: "webp",
     tech: ["html", "css"],
   },
   {
     name: "todo web app",
-    image: "thumbnail-project-3-large.webp",
+    image: "thumbnail-project-3-large",
+    imageExt: "webp",
     tech: ["html", "css", "javascript"],
   },
   {
     name: "entertainment web app",
-    image: "thumbnail-project-4-large.webp",
+    image: "thumbnail-project-4-large",
+    imageExt: "webp",
     tech: ["html", "css", "javascript"],
   },
   {
     name: "memory game",
-    image: "thumbnail-project-5-large.webp",
+    image: "thumbnail-project-5-large",
+    imageExt: "webp",
     tech: ["html", "css", "javascript"],
   },
   {
     name: "art gallery showcase",
-    image: "thumbnail-project-6-large.webp",
+    image: "thumbnail-project-6-large",
+    imageExt: "webp",
     tech: ["html", "css", "javascript"],
   },
 ];
