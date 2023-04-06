@@ -8,16 +8,19 @@
   font-weight: 700;
   color: $color-font;
   text-transform: uppercase;
-  line-height: 2.6rem;
+  line-height: 2.2rem;
   letter-spacing: 0.23rem;
+  padding: 0.5rem;
+  border-radius: 0.15rem;
   //border-bottom: 2px solid $color-primary;
-  transition: background-position 0.2s;
+  transition: background-position 0.4s ease-out;
   background: linear-gradient(to bottom, transparent 48%, $color-primary 5%)
     no-repeat top;
   background-size: auto 200%;
 
   &:hover,
   &:active {
+    transition: background-position 0.2s;
     cursor: pointer;
     background-position: bottom;
     //background-color: $color-primary;

@@ -1,10 +1,6 @@
 @import "../variables";
 
 .skills-section {
-  .skills-section-title {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
   & .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));

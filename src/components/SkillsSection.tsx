@@ -26,7 +26,6 @@ const SkillsSection = function () {
   return (
     <>
       <section className="skills-section">
-        <h2 className="skills-section-title">Skills</h2>
         <div className="skills-grid">{contentJSX}</div>
       </section>
       <Separator />

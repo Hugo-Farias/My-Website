@@ -48,7 +48,7 @@ const ProjectsSection = function () {
 
   return (
     <div className="projects">
-      <h2 className="title-name">Projects</h2>
+      <h2 className="section-title">Projects</h2>
 
       <div className="project-container">{contentJSX}</div>
       <Separator hide={true} />

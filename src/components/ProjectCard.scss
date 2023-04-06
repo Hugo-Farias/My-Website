@@ -1,13 +1,14 @@
 @import "../variables";
 
 .project-card {
-  position: relative;
   margin-top: 2rem;
   overflow: hidden;
   //padding: 3rem 0 0 0;
   //max-width: 34rem;
 
   & .image-wrapper {
+    position: relative;
+    border-radius: 0.25rem;
     display: flex;
     overflow: hidden;
     margin-bottom: 1rem;
@@ -50,13 +51,14 @@
   @media (min-width: $screen-medium) {
     //position
 
-    & .buttons {
+    & > .buttons {
+      display: none;
+    }
+
+    & .image-wrapper > .buttons {
       opacity: 0;
       position: absolute;
-      //half of image-wrapper container at full size, or 40.5% of the entire card container
-      //top: 175.5545px;
-      //
-      top: 40.5%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       flex-direction: column;

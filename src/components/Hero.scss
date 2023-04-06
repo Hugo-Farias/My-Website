@@ -1,13 +1,16 @@
 @import "../variables";
 
 .hero {
+  display: grid;
+  place-content: center;
   position: relative;
   //overflow-x: hidden;
   $offset-right: 0;
   $offset-left: 0;
-  margin: 0 -#{$offset-right}rem 0 -#{$offset-left}rem;
-  padding: 5rem #{$offset-right}rem 0 #{$offset-left}rem;
+  margin: 0 -#{$offset-right}rem -6rem -#{$offset-left}rem;
+  padding: 0 #{$offset-right}rem 0 #{$offset-left}rem;
   text-align: center;
+  height: 95vh;
 
   &::after {
     content: "";
@@ -40,7 +43,7 @@
   & .greeting {
     @include flex-center;
     flex-direction: column;
-    margin: 0 auto;
+    //margin: 0 auto;
     z-index: 1;
     max-width: 71rem;
 
