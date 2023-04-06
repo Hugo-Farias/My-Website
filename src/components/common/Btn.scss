@@ -17,7 +17,7 @@
   background-size: auto 200%;
 
   &:hover,
-  &:focus {
+  &:active {
     cursor: pointer;
     background-position: bottom;
     //background-color: $color-primary;

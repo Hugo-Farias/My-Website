@@ -1,6 +1,7 @@
 import "./ProjectCard.scss";
 import React, { useEffect, useState } from "react";
 import Btn from "./common/Btn";
+import AsyncImg from "./common/AsyncImg";
 
 interface PropsT {
   data: { image: string; imageExt: string; name: string; tech: string[] };
@@ -10,18 +11,6 @@ const ProjectCard: React.FC<PropsT> = function ({ data }) {
   const { image, imageExt, name, tech } = data;
 
   const [isHover, setIsHover] = useState<boolean>(false);
-  const [imageUrl, setImageUrl] = useState<string | null>(null);
-
-  useEffect(() => {
-    const loadImage = async function (imageName: string): Promise<string> {
-      const res = await import(`../assets/images/${imageName}.${imageExt}`);
-      return res.default;
-    };
-
-    loadImage(image).then((url) => setImageUrl(url));
-  }, [image]);
-
-  if (!imageUrl) return null;
 
   return (
     <div
@@ -32,7 +21,11 @@ const ProjectCard: React.FC<PropsT> = function ({ data }) {
       className={`project-card ${isHover ? "hover" : ""}`}
     >
       <div className="image-wrapper">
-        <img src={imageUrl} alt={`Image ${image}`} className="async-image" />
+        <AsyncImg
+          src={`/../assets/images/${image}.${imageExt}`}
+          alt={`Image for "${name}"`}
+          className="async-image"
+        />
       </div>
       <div className="info">
         <h4 className="name">{name}</h4>
