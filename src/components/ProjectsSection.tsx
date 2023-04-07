@@ -1,47 +1,16 @@
 import "./ProjectsSection.scss";
 import ProjectCard from "./ProjectCard";
 import Separator from "./common/Separator";
-
-const DUMMY_DATA = [
-  {
-    name: "design portfolio",
-    image: "thumbnail-project-1-large",
-    imageExt: "webp",
-    tech: ["html", "css"],
-  },
-  {
-    name: "e-learning landing page",
-    image: "thumbnail-project-2-large",
-    imageExt: "webp",
-    tech: ["html", "css"],
-  },
-  {
-    name: "todo web app",
-    image: "thumbnail-project-3-large",
-    imageExt: "webp",
-    tech: ["html", "css", "javascript"],
-  },
-  {
-    name: "entertainment web app",
-    image: "thumbnail-project-4-large",
-    imageExt: "webp",
-    tech: ["html", "css", "javascript"],
-  },
-  {
-    name: "memory game",
-    image: "thumbnail-project-5-large",
-    imageExt: "webp",
-    tech: ["html", "css", "javascript"],
-  },
-  {
-    name: "art gallery showcase",
-    image: "thumbnail-project-6-large",
-    imageExt: "webp",
-    tech: ["html", "css", "javascript"],
-  },
-];
+import DUMMY_DATA from "../data/projects.json";
+import { useQuery } from "@apollo/client";
+import { pinnedRepositories } from "../graphql/PinnedRepositories.graphql";
 
 const ProjectsSection = function () {
+  const { data, loading } = useQuery(pinnedRepositories);
+
+  console.log(loading);
+  console.log(data.user.pinnedItems.nodes[0]);
+
   const contentJSX = DUMMY_DATA.map((v, i) => {
     return <ProjectCard key={i} data={v} />;
   });

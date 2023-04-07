@@ -1,0 +1,50 @@
+type Query {
+  user(login: String!): User
+}
+
+type User {
+  pinnedItems(first: Int, types: [PinnedItemType!]): PinnedItemList
+}
+
+type PinnedItemList {
+  nodes: [Repository!]
+}
+
+interface PinnedItem {
+  id: ID!
+}
+
+type Repository implements PinnedItem {
+  name: String!
+  openGraphImageUrl: String
+  url: String!
+  homepageUrl: String
+  id: ID!
+  languages(first: Int): LanguageList
+  repositoryTopics(first: Int): RepositoryTopicList
+}
+
+type LanguageList {
+  nodes: [Language!]
+}
+
+type Language {
+  name: String!
+  color: String
+}
+
+type RepositoryTopicList {
+  nodes: [RepositoryTopic!]
+}
+
+type RepositoryTopic {
+  topic: Topic!
+}
+
+type Topic {
+  name: String!
+}
+
+enum PinnedItemType {
+  REPOSITORY
+}
