@@ -4,8 +4,6 @@ import App from "./App";
 import "./index.scss";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
-console.log(import.meta.env.VITE_REACT_APP_GHTOKEN);
-
 const client = new ApolloClient({
   uri: "https://api.github.com/graphql",
   headers: {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useImage = function (fileName: string, fileExt: string) {
+const useImage = function (fileName: string, fileExt?: string) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [path, setPath] = useState(null);

@@ -2,14 +2,15 @@ import "./ProjectCard.scss";
 import React, { useState } from "react";
 import Btn from "./common/Btn";
 import useImage from "../hooks/useImage";
+import { projectItem } from "../../typeDefinitions";
 
 interface PropsT {
-  data: { image: string; imageExt: string; name: string; tech: string[] };
+  data: projectItem;
 }
 
 const ProjectCard: React.FC<PropsT> = function ({ data }) {
   const { image, imageExt, name, tech } = data;
-  const { path } = useImage(image, imageExt);
+  // const { path } = useImage(image, imageExt);
 
   const [isHover, setIsHover] = useState<boolean>(false);
 
@@ -22,9 +23,7 @@ const ProjectCard: React.FC<PropsT> = function ({ data }) {
       className={`project-card ${isHover ? "hover" : ""}`}
     >
       <div className="image-wrapper">
-        {!path || (
-          <img src={path} alt={`Image for "${name}"`} className="async-image" />
-        )}
+        <img src={image} alt={`Image for "${name}"`} className="async-image" />
         <div className="buttons">
           <Btn>View Project</Btn>
           <Btn>View Code</Btn>

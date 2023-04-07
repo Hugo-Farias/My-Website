@@ -38,7 +38,6 @@ const ContactSection = function () {
   const handleSubmit = function (e: FormEvent) {
     e.preventDefault();
     const target = e.target as HTMLFormElement;
-    console.log(target.id);
   };
 
   const handleInvalid = (e: FormEvent) => {
