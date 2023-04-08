@@ -2,16 +2,20 @@
   "firstName": "hugo",
   "lastName": "farias",
   "techList": [
-    "reactjs",
-    "react native",
     "react",
     "html",
     "css",
     "sass",
     "scss",
+    "sass/scss",
     "typescript",
     "javascript",
     "vite",
-    "nextjs"
+    "nextjs",
+    "api",
+    "react-router",
+    "react-router-dom",
+    "react-redux",
+    "graphql"
   ]
 }

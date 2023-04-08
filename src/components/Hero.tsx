@@ -20,7 +20,9 @@ const Hero = function () {
             apps.
           </p>
 
-          <Btn>Contact Me</Btn>
+          <Btn onClick={() => window.scrollTo(0, document.body.scrollHeight)}>
+            Contact Me
+          </Btn>
         </div>
       </section>
       <Separator />

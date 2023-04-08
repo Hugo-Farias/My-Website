@@ -32,10 +32,12 @@
       margin-bottom: 1.3rem;
       gap: 2rem;
       justify-content: flex-start;
+      flex-wrap: wrap;
+      overflow: hidden;
       & > .tech {
         color: $color-gray;
         text-transform: uppercase;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         font-weight: 400;
       }
     }

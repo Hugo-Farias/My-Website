@@ -20,9 +20,10 @@
 
   &:hover,
   &:active {
-    transition: background-position 0.2s;
-    background-position: bottom;
+    //color: $color-font;
+    //transition: background-position 0.2s;
+    //background-position: bottom;
     cursor: pointer;
-    //color: $color-primary;
+    color: $color-primary;
   }
 }

@@ -1,6 +1,7 @@
 import "./ProjectsSection.scss";
 import ProjectCard from "./ProjectCard";
 import Separator from "./common/Separator";
+import { techList } from "../data/sharedData.json";
 import { useQuery } from "@apollo/client";
 import { pinnedRepositories } from "../graphql/PinnedRepositories.graphql";
 import { PinnedItem, projectItem } from "../../typeDefinitions";
@@ -8,10 +9,18 @@ import { PinnedItem, projectItem } from "../../typeDefinitions";
 const ProjectsSection = function () {
   const { data, loading } = useQuery(pinnedRepositories);
 
+  console.log(techList);
+
   const test = data?.user.pinnedItems.nodes.map((pinnedItem: PinnedItem) => {
     const topics = pinnedItem.repositoryTopics.nodes;
     let techArray = ["react", "html", "css"];
-    if (topics.length > 0) techArray = topics.map((v) => v.topic.name);
+    if (topics.length > 0) {
+      techArray = topics
+        .map((v) => v.topic.name)
+        .filter((v) => techList.includes(v));
+    }
+
+    console.log(techArray);
 
     return {
       id: pinnedItem.id,

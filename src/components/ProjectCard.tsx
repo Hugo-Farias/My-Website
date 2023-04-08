@@ -19,12 +19,12 @@ const ProjectCard: React.FC<PropsT> = function ({ data }) {
 
   const buttonsContainer = (
     <div className="buttons">
-      <a href={projectLink} target="_blank">
-        <Btn>View Project</Btn>
-      </a>
-      <a href={codeLink} target="_blank">
-        <Btn>View Code</Btn>
-      </a>
+      <Btn link={projectLink} target="_blank">
+        View Project
+      </Btn>
+      <Btn link={codeLink} target="_blank">
+        View Code
+      </Btn>
     </div>
   );
 
