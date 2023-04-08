@@ -24,7 +24,7 @@ const ProjectsSection = function () {
   });
 
   const contentJSX = loading ? (
-    <p>Loading...</p>
+    <h2 className="loading">Loading...</h2>
   ) : (
     test.map((v: projectItem) => {
       return <ProjectCard key={v.id} data={v} />;

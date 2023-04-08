@@ -2,6 +2,7 @@ import "./Btn.scss";
 import React from "react";
 
 interface PropsT {
+  // onClick?: Window | (() => void) | undefined;
   children: React.ReactNode;
 }
 

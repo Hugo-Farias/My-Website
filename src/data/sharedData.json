@@ -1,4 +1,17 @@
 {
   "firstName": "hugo",
-  "lastName": "farias"
+  "lastName": "farias",
+  "techList": [
+    "reactjs",
+    "react native",
+    "react",
+    "html",
+    "css",
+    "sass",
+    "scss",
+    "typescript",
+    "javascript",
+    "vite",
+    "nextjs"
+  ]
 }

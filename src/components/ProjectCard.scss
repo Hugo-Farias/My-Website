@@ -12,10 +12,11 @@
     display: flex;
     overflow: hidden;
     margin-bottom: 1rem;
-    //border-radius: 1rem;
+    aspect-ratio: 1.35;
     & > .async-image {
       transition: filter 0.2s, transform 0.2s;
       max-width: 100%;
+      object-fit: cover;
     }
   }
 
@@ -43,9 +44,6 @@
   & .buttons {
     display: flex;
     gap: 3rem;
-    & button {
-      margin-top: 1.3rem;
-    }
   }
 
   @media (min-width: $screen-medium) {
@@ -62,6 +60,8 @@
       left: 50%;
       transform: translate(-50%, -50%);
       flex-direction: column;
+      align-content: center;
+      align-items: center;
     }
 
     &.hover .async-image {
