@@ -16,6 +16,7 @@
     "react-router",
     "react-router-dom",
     "react-redux",
-    "graphql"
+    "graphql",
+    "dotenv"
   ]
 }

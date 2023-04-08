@@ -88,7 +88,7 @@ const ContactSection = function () {
           method="post"
         >
           {contentInputJSX}
-          <Btn>Send Message</Btn>
+          <Btn onClick={() => null}>Send Message</Btn>
         </form>
       </div>
       <Separator />
