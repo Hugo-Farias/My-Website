@@ -39,7 +39,6 @@ export interface projectItem {
   image: string;
   imageExt?: string;
   tech: string[];
-  projectLink?: string;
+  projectLink?: string | null;
   codeLink: string;
-  loading?: boolean;
 }
