@@ -2,7 +2,7 @@ import { githubApiData, PinnedItem, projectItem } from "../typeDefinitions";
 import { techList } from "./data/sharedData.json";
 
 export const convertPinnedData = function (data: githubApiData): projectItem[] {
-  const test = data?.user.pinnedItems.nodes.map((pinnedItem: PinnedItem) => {
+  return data?.user.pinnedItems.nodes.map((pinnedItem: PinnedItem) => {
     const topics = pinnedItem.repositoryTopics.nodes;
 
     let techArray = ["react", "html", "css"];
@@ -24,8 +24,4 @@ export const convertPinnedData = function (data: githubApiData): projectItem[] {
       codeLink: pinnedItem.url,
     };
   });
-
-  console.log(test[0]);
-
-  return test;
 };

@@ -3,21 +3,16 @@ import ProjectCard from "./ProjectCard";
 import Separator from "./common/Separator";
 import { useQuery } from "@apollo/client";
 import { pinnedRepositories } from "../graphql/PinnedRepositories.graphql";
-import { PinnedItem, projectItem } from "../../typeDefinitions";
+import { projectItem } from "../../typeDefinitions";
 import { convertPinnedData } from "../helpers";
-import { techList } from "../data/sharedData.json";
 
 const ProjectsSection = function () {
-  const { data, loading, error } = useQuery(pinnedRepositories);
-
-  console.log(data);
-
-  const pinnedItems = convertPinnedData(data);
+  const { data, loading } = useQuery(pinnedRepositories);
 
   const contentJSX = loading ? (
     <h2 className="loading">Loading...</h2>
   ) : (
-    pinnedItems.map((v: projectItem) => {
+    convertPinnedData(data).map((v: projectItem) => {
       return <ProjectCard key={v.id} data={v} />;
     })
   );
