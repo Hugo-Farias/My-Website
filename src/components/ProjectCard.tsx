@@ -11,7 +11,8 @@ interface PropsT {
 // imageExt is only required if using a local image
 
 const ProjectCard: React.FC<PropsT> = function ({ data }) {
-  const { image, imageExt, name, tech, projectLink, codeLink } = data;
+  const { image, imageExt, name, tech, projectLink, codeLink, description } =
+    data;
 
   let src = imageExt ? useImage(image, imageExt).path! : image;
 
@@ -42,6 +43,7 @@ const ProjectCard: React.FC<PropsT> = function ({ data }) {
       </div>
       <div className="info">
         <h4 className="name">{name}</h4>
+        <p className="description">{description}</p>
         <div className="tech-container">
           {tech.map((value, index) => (
             <h5 key={index} className="tech">

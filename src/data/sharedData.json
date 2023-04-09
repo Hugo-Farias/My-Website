@@ -13,10 +13,11 @@
     "vite",
     "nextjs",
     "api",
+    "graphql-api",
+    "rest-api",
     "react-router",
     "react-router-dom",
     "react-redux",
-    "graphql",
     "dotenv"
   ]
 }

@@ -1,41 +1,23 @@
 import "./ProjectsSection.scss";
 import ProjectCard from "./ProjectCard";
 import Separator from "./common/Separator";
-import { techList } from "../data/sharedData.json";
 import { useQuery } from "@apollo/client";
 import { pinnedRepositories } from "../graphql/PinnedRepositories.graphql";
-import { PinnedItem, projectItem } from "../../typeDefinitions";
+import { projectItem } from "../../typeDefinitions";
+import { convertPinnedData } from "../helpers";
 
 const ProjectsSection = function () {
-  const { data, loading } = useQuery(pinnedRepositories);
+  const { data, loading, error } = useQuery(pinnedRepositories);
 
-  console.log(techList);
+  console.log(data);
 
-  const test = data?.user.pinnedItems.nodes.map((pinnedItem: PinnedItem) => {
-    const topics = pinnedItem.repositoryTopics.nodes;
-
-    let techArray = ["react", "html", "css"];
-
-    if (topics.length > 0) {
-      techArray = topics
-        .map((v) => v.topic.name)
-        .filter((v) => techList.includes(v));
-    }
-
-    return {
-      id: pinnedItem.id,
-      name: pinnedItem.name.replaceAll("-", " "),
-      image: pinnedItem.openGraphImageUrl,
-      tech: techArray,
-      projectLink: pinnedItem?.homepageUrl,
-      codeLink: pinnedItem.url,
-    };
-  });
+  const pinnedItems = convertPinnedData(data);
 
   const contentJSX = loading ? (
     <h2 className="loading">Loading...</h2>
   ) : (
-    test.map((v: projectItem) => {
+    pinnedItems.map((v: projectItem) => {
+      console.log(v);
       return <ProjectCard key={v.id} data={v} />;
     })
   );
@@ -43,7 +25,6 @@ const ProjectsSection = function () {
   return (
     <div className="projects">
       <h2 className="section-title">Projects</h2>
-
       <div className="project-container">{contentJSX}</div>
       <Separator hide={true} />
     </div>

@@ -22,6 +22,7 @@ type Repository implements PinnedItem {
   id: ID!
   languages(first: Int): LanguageList
   repositoryTopics(first: Int): RepositoryTopicList
+  description: String
 }
 
 type LanguageList {

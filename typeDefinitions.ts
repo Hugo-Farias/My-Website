@@ -4,6 +4,7 @@ export interface PinnedItem {
   url: string;
   homepageUrl: string;
   id: string;
+  description: string;
   languages: {
     nodes: {
       name: string;
@@ -19,6 +20,14 @@ export interface PinnedItem {
   };
 }
 
+export interface githubApiData {
+  user: {
+    pinnedItems: {
+      nodes: PinnedItem[];
+    };
+  };
+}
+
 export interface UserPinnedItems {
   nodes: PinnedItem[];
 }
@@ -26,6 +35,7 @@ export interface UserPinnedItems {
 export interface projectItem {
   id: string;
   name: string;
+  description: string;
   image: string;
   imageExt?: string;
   tech: string[];
