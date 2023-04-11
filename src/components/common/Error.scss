@@ -1,0 +1,6 @@
+@import "../../variables";
+
+.error {
+  @include flex-center;
+  flex-direction: column;
+}

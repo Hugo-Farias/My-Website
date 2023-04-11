@@ -3,9 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.scss";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { GITHUB_GRAPHQL_URL } from "./config";
 
 const client = new ApolloClient({
-  uri: "https://api.github.com/graphql",
+  uri: GITHUB_GRAPHQL_URL,
   headers: {
     Authorization: `Bearer ${import.meta.env.VITE_REACT_APP_GHTOKEN}`,
   },

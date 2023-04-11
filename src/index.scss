@@ -34,6 +34,7 @@ a {
   //max-height: 0;
   color: $color-font;
   text-decoration: none;
+  //text-decoration-color: $color-primary;
   transition: color 0.3s;
   &:hover,
   &:active,
@@ -47,10 +48,17 @@ button {
   border: none;
 }
 
-h2 {
+h1 {
   font-size: 6.8rem;
   @media (max-width: $screen-small) {
     font-size: 5rem;
+  }
+}
+
+h2 {
+  font-size: 3.8rem;
+  @media (max-width: $screen-small) {
+    font-size: 2rem;
   }
 }
 
