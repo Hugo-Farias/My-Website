@@ -5,6 +5,8 @@ import Navbar from "./Navbar";
 import React, { useState, FormEvent, ChangeEvent } from "react";
 import FormInput from "./common/FormInput";
 
+const web3formsToken = import.meta.env.VITE_REACT_APP_WEB3FORMS;
+
 interface inputsT {
   tag: "input" | "textarea";
   inputName: string;
@@ -28,16 +30,6 @@ inputs.map((v) => (formInitialState[v.inputName] = ""));
 const ContactSection = function () {
   const [formInput, setFormInput] = useState<inputStateT>(formInitialState);
   const [isInvalid, setIsInvalid] = useState<inputStateT>(formInitialState);
-
-  const handleSubmit = function (e: FormEvent) {
-    e.preventDefault();
-    const target = e.target as HTMLFormElement;
-
-    //@ts-ignore
-    console.log(target.name.value);
-    console.log(target.email.value);
-    console.log(target.message.value);
-  };
 
   const handleInvalid = (e: FormEvent) => {
     e.preventDefault();
@@ -81,11 +73,12 @@ const ContactSection = function () {
           </p>
         </div>
         <form
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
           onInvalid={handleInvalid}
-          action=""
+          action="https://api.web3forms.com/submit"
           method="post"
         >
+          <input type="hidden" name="access_key" value={web3formsToken} />
           {contentInputJSX}
           <Btn onClick={() => null}>Send Message</Btn>
         </form>
