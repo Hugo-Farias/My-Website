@@ -10,6 +10,7 @@ interface inputsT {
   inputName: string;
   type: "text" | "email";
 }
+
 const inputs: inputsT[] = [
   { tag: "input", inputName: "name", type: "text" },
   { tag: "input", inputName: "email", type: "email" },
@@ -18,26 +19,24 @@ const inputs: inputsT[] = [
 
 interface inputStateT {
   [key: string]: string;
-  name: string;
-  email: string;
-  message: string;
 }
 
+const formInitialState: inputStateT = {};
+
+inputs.map((v) => (formInitialState[v.inputName] = ""));
+
 const ContactSection = function () {
-  const [formInput, setFormInput] = useState<inputStateT>({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isInvalid, setIsInvalid] = useState<inputStateT>({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [formInput, setFormInput] = useState<inputStateT>(formInitialState);
+  const [isInvalid, setIsInvalid] = useState<inputStateT>(formInitialState);
 
   const handleSubmit = function (e: FormEvent) {
     e.preventDefault();
     const target = e.target as HTMLFormElement;
+
+    //@ts-ignore
+    console.log(target.name.value);
+    console.log(target.email.value);
+    console.log(target.message.value);
   };
 
   const handleInvalid = (e: FormEvent) => {

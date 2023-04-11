@@ -16,8 +16,7 @@ const Hero = function () {
           </h1>
 
           <p className="description">
-            I'm a bilingual front-end developer passionate about building web
-            apps.
+            A bilingual front-end developer passionate about building web apps.
           </p>
 
           <Btn onClick={() => window.scrollTo(0, document.body.scrollHeight)}>

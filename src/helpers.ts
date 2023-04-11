@@ -1,7 +1,7 @@
 import { githubApiData, PinnedItem, projectItem } from "../typeDefinitions";
 import { techList } from "./data/sharedData.json";
 
-export const convertPinnedData = function (data: githubApiData): projectItem[] {
+export const convertGithubData = function (data: githubApiData): projectItem[] {
   return data?.user.pinnedItems.nodes.map((pinnedItem: PinnedItem) => {
     const topics = pinnedItem.repositoryTopics.nodes;
 
@@ -25,3 +25,18 @@ export const convertPinnedData = function (data: githubApiData): projectItem[] {
     };
   });
 };
+
+// export const sendEmail = function (to: string, subject: string, body: string) {
+//   gapi.client.gmail.users.messages
+//     .send({
+//       userId: "me",
+//       resource: {
+//         raw: window.btoa(
+//           "To: " + to + "\r\n" + "Subject: " + subject + "\r\n\r\n" + body
+//         ),
+//       },
+//     })
+//     .execute(function (response: any) {
+//       console.log(response);
+//     });
+// };

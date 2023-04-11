@@ -1,8 +1,8 @@
 import "./Btn.scss";
-import React, { MouseEventHandler } from "react";
+import React from "react";
 
 interface PropsT {
-  link?: string;
+  link?: string | null;
   target?: string;
   onClick?: () => void;
   children: React.ReactNode;
