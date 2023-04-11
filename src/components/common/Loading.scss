@@ -1,0 +1,25 @@
+@import "../../variables";
+
+@keyframes jump {
+  30% {
+    transform: translateY(-5rem);
+    background-color: $color-secondary;
+  }
+}
+
+.loading {
+  @include flex-center;
+  gap: 1rem;
+  margin-top: 10rem;
+
+  @for $i from 0 through 5 {
+    & .dot#{$i + 1} {
+      animation: jump 1s forwards infinite;
+      animation-delay: #{$i * 140}ms;
+      background-color: $color-primary;
+      height: 2rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+  }
+}

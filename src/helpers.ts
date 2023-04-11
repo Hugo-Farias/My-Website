@@ -25,18 +25,3 @@ export const convertGithubData = function (data: githubApiData): projectItem[] {
     };
   });
 };
-
-// export const sendEmail = function (to: string, subject: string, body: string) {
-//   gapi.client.gmail.users.messages
-//     .send({
-//       userId: "me",
-//       resource: {
-//         raw: window.btoa(
-//           "To: " + to + "\r\n" + "Subject: " + subject + "\r\n\r\n" + body
-//         ),
-//       },
-//     })
-//     .execute(function (response: any) {
-//       console.log(response);
-//     });
-// };
