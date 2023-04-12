@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 
-const useImage = function (fileName: string, fileExt?: string) {
+const useImage = function (filePath: string, fileExt?: string) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [path, setPath] = useState(null);
 
+  // console.log(`${filePath}.${fileExt}`);
+
   useEffect(() => {
     const fetchImage = async () => {
       try {
-        const response = await import(
-          `../assets/images/${fileName}.${fileExt}`
-        );
+        const response = await import(`${filePath}.${fileExt}`);
         setPath(response.default);
       } catch (err: any) {
         setError(err);
@@ -20,7 +20,7 @@ const useImage = function (fileName: string, fileExt?: string) {
     };
 
     fetchImage();
-  }, [fileName]);
+  }, [filePath]);
 
   return {
     loading,

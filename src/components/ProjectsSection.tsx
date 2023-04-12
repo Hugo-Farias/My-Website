@@ -2,11 +2,11 @@ import "./ProjectsSection.scss";
 import ProjectCard from "./ProjectCard";
 import Separator from "./common/Separator";
 import Loading from "./common/Loading";
+import Error from "./common/Error";
 import { useQuery } from "@apollo/client";
 import { pinnedRepositories } from "../graphql/PinnedRepositories.graphql";
 import { projectItem } from "../../typeDefinitions";
 import { convertGithubData } from "../helpers";
-import Error from "./common/Error";
 import { GITHUB_URL } from "../config";
 
 const ProjectsSection = function () {

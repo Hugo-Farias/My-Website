@@ -1,5 +1,6 @@
 import "./SkillsSection.scss";
 import Separator from "./common/Separator";
+import SkillCard from "./SkillCard";
 
 const DUMMY_DATA = [
   { name: "HTML", image: "html" },
@@ -15,12 +16,7 @@ const DUMMY_DATA = [
 
 const SkillsSection = function () {
   const contentJSX = DUMMY_DATA.map((v, i) => {
-    return (
-      <div key={i} className="skill-card">
-        {/*<img src={`../assets/images/skills/${v.image}.svg`} alt="" />*/}
-        <h3 className="name">{v.name}</h3>
-      </div>
-    );
+    return <SkillCard key={i} data={v} />;
   });
 
   return (
