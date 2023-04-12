@@ -10,7 +10,7 @@ interface PropsT {
 }
 
 const SkillCard: React.FC<PropsT> = function ({ data }) {
-  const { path } = useImage(`../assets/images/skills/${data.image}`, "svg");
+  const { path } = useImage(`skills/colored/${data.image}`, "svg");
 
   if (!path) return null;
 
