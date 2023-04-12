@@ -1,5 +1,4 @@
 import "./SkillCard.scss";
-
 import React from "react";
 import useImage from "../hooks/useImage";
 

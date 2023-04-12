@@ -5,7 +5,7 @@ import SkillCard from "./SkillCard";
 const DUMMY_DATA = [
   { name: "HTML", image: "html" },
   { name: "CSS", image: "css" },
-  { name: "Javacript", image: "javacript" },
+  { name: "Javascript", image: "javascript" },
   { name: "Typescript", image: "typescript" },
   { name: "React", image: "react" },
   { name: "SASS/SCSS", image: "sass" },

@@ -3,32 +3,21 @@
 .skills-section {
   & .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    justify-content: space-around;
-    margin-inline: auto;
-    max-width: 100rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+    align-items: start;
+    justify-items: unset;
+    //justify-content: start;
+    //margin-inline: auto;
+    //max-width: 100rem;
 
     @media (min-width: $screen-small) {
-      grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+      //grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
     }
-
-    .skill-card {
-      margin: 1.5rem auto;
-
-      & .name {
-        font-size: 2.2rem;
-        font-weight: 200;
-        margin-bottom: 1rem;
-        @media (min-width: $screen-small) {
-          font-size: 3rem;
-        }
-      }
-
-      & .years {
-        font-weight: 500;
-        font-size: 1.8rem;
-        color: $color-gray;
-      }
+    @media (max-width: $screen-small) {
+      justify-content: center;
+      justify-items: start;
+      grid-template-columns: repeat(auto-fit, 20rem);
     }
   }
 }
