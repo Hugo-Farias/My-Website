@@ -1,4 +1,3 @@
-import "./useImportSvg.scss";
 import React, { useEffect, useRef, useState } from "react";
 
 interface optionsT {
@@ -14,13 +13,15 @@ const useImportSvg = function (name: string, options: optionsT = {}) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
 
+  console.log(`../assets/images/skills/colored/${name}.svg`);
+
   const { onCompleted, onError } = options;
   useEffect(() => {
     setLoading(true);
     const importIcon = async () => {
       try {
         ImportedIconRef.current = (
-          await import(`./${name}.svg`)
+          await import(`../assets/images/${name}.svg`)
         ).ReactComponent;
         if (onCompleted) {
           onCompleted(name, ImportedIconRef.current);

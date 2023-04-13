@@ -9,9 +9,10 @@
     flex-direction: column;
   }
 
-  & > img {
+  & > svg {
     width: 6.4rem;
-    fill: blue;
+    height: 6.4rem;
+    //aspect-ratio: 1;
   }
 
   & .name {
