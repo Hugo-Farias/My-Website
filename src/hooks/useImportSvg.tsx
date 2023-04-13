@@ -13,8 +13,6 @@ const useImportSvg = function (name: string, options: optionsT = {}) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
 
-  console.log(`../assets/images/skills/colored/${name}.svg`);
-
   const { onCompleted, onError } = options;
   useEffect(() => {
     setLoading(true);

@@ -1,6 +1,5 @@
 import "./SkillCard.scss";
-import React, { lazy } from "react";
-// import useImage from "../hooks/useImage";
+import React from "react";
 import useImportSvg from "../hooks/useImportSvg";
 import Loading from "./common/Loading";
 
@@ -12,13 +11,13 @@ interface PropsT {
 }
 
 const SkillCard: React.FC<PropsT> = function ({ data }) {
-  const { SvgIcon } = useImportSvg(data.image);
+  // const { SvgIcon } = useImportSvg(`icon-colored-${data.image}`);
+  const { SvgIcon } = useImportSvg(`icon-outlined-${data.image}`);
 
   if (!SvgIcon) return <Loading />;
 
   return (
     <div className="skill-card">
-      {/*<img src={SvgIcon} alt="" />*/}
       {/*//@ts-ignore*/}
       <SvgIcon />
       <h3 className="name">{data.name}</h3>

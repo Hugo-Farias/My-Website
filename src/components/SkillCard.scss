@@ -12,7 +12,11 @@
   & > svg {
     width: 6.4rem;
     height: 6.4rem;
-    //aspect-ratio: 1;
+    //filter: ;
+
+    &:hover {
+      filter: unset;
+    }
   }
 
   & .name {
