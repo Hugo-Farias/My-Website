@@ -2,11 +2,11 @@
 
 .button {
   //transition: color 0.3s;
+  cursor: pointer;
   margin: 0;
   font-family: inherit;
   font-size: 1.6rem;
   font-weight: 700;
-  color: $color-font;
   text-transform: uppercase;
   line-height: 2.2rem;
   letter-spacing: 0.23rem;
@@ -14,16 +14,19 @@
   border-radius: 0.15rem;
   //border-bottom: 2px solid $color-primary;
   transition: all 0.4s ease-out;
-  background: linear-gradient(to bottom, transparent 47%, $color-primary 5%)
-    no-repeat top;
+  background: linear-gradient(
+      to bottom,
+      $color-primary 50%,
+      lighten($color-secondary, 20) 0%
+    )
+    repeat top;
   background-size: auto 200%;
+  color: $color-font;
 
   &:hover,
   &:active {
-    //color: $color-font;
-    //transition: background-position 0.2s;
-    //background-position: bottom;
-    cursor: pointer;
-    color: $color-primary;
+    color: black;
+    transition: background 0.2s;
+    background-position: bottom;
   }
 }
