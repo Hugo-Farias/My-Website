@@ -41,8 +41,8 @@ $icon-list: github, frontend-mentor, linkedin, twitter;
 
       &:hover,
       &:focus {
+        fill: lighten($color-secondary, 20);
         //fill: $color-primary;
-        fill: $color-primary;
       }
     }
   }

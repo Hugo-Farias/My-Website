@@ -58,9 +58,10 @@
 
       & > .name {
         text-transform: capitalize;
-        text-decoration: underline;
-        text-decoration-color: $color-primary;
-        text-decoration-thickness: 4px;
+
+        //text-decoration: underline;
+        //text-decoration-color: $color-primary;
+        //text-decoration-thickness: 4px;
       }
 
       @media (min-width: $screen-small) {

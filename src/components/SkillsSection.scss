@@ -4,20 +4,17 @@
   & .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: 2rem;
+    grid-gap: 0.1rem;
     align-items: start;
     justify-items: unset;
     //justify-content: start;
     //margin-inline: auto;
     //max-width: 100rem;
 
-    @media (min-width: $screen-small) {
-      //grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
-    }
     @media (max-width: $screen-small) {
       justify-content: center;
-      justify-items: start;
-      grid-template-columns: repeat(auto-fit, 20rem);
+      //justify-items: start;
+      grid-template-columns: repeat(auto-fit, 13rem);
     }
   }
 }
