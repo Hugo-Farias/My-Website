@@ -1,7 +1,5 @@
 @import "../variables";
 
-$icon-list: github, frontend-mentor, linkedin, twitter;
-
 .nav {
   @include flex-center;
   flex-direction: column;

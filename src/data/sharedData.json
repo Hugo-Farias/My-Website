@@ -1,6 +1,11 @@
 {
   "firstName": "hugo",
   "lastName": "farias",
+  "navLinks": {
+    "github": "https://github.com/Hugo-Farias",
+    "frontEndMentor": "https://www.frontendmentor.io/profile/Hugo-Farias",
+    "linkedIn": "https://www.linkedin.com/in/hugo-farias-668274238/"
+  },
   "techList": [
     "react",
     "html",
