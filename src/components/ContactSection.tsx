@@ -66,7 +66,7 @@ const ContactSection = function () {
     <>
       <div className="contact-section">
         <div className="cta-container">
-          <h2 className="title">Contact</h2>
+          <h1 className="title">Contact</h1>
           <p>
             I would love to hear about your project and how I could help. Please
             fill the form, and I'll get back to you as soon as possible.

@@ -26,8 +26,7 @@
   color: $color-font;
 
   &:hover,
-  &:active,
-  &:focus {
+  &:active {
     @include transitionProps(0.2);
     //transition: background 0.2s;
     background-position: bottom;

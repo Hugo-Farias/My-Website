@@ -1,5 +1,16 @@
 @import "../../variables";
 
+@keyframes shake {
+  0%,
+  60% {
+    transform: translateX(0.5rem);
+  }
+  40%,
+  80% {
+    transform: translateX(-0.5rem);
+  }
+}
+
 .form-input {
   position: relative;
   width: 100%;
@@ -12,8 +23,8 @@
     color: inherit;
     padding: 2rem 3rem;
     font-family: inherit;
-    background-color: transparent;
-    backdrop-filter: blur(10px);
+    background-color: rgba(white, 1%);
+    //backdrop-filter: blur(10px);
     outline: transparent;
     border: none;
     border-bottom: 1px solid $color-gray;
@@ -29,8 +40,8 @@
 
   &.invalid input,
   &.invalid textarea {
+    animation: shake 0.2s forwards;
     border-bottom: 1px solid $color-invalid;
-    //border-color: ;
   }
 
   &.invalid:before {
@@ -54,16 +65,13 @@
     position: absolute;
     right: 1rem;
     top: 1.7rem;
-    //align-self: flex-end;
     display: grid;
     place-content: center;
     color: $color-invalid;
     border: 1px solid $color-invalid;
     font-size: 2rem;
     height: 2.4rem;
-    width: 2.4rem;
-    //aspect-ratio: 1;
-    //padding: 2rem;
+    aspect-ratio: 1;
     border-radius: 50%;
   }
 }
