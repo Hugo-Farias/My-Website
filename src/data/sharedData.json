@@ -23,6 +23,7 @@
     "react-router",
     "react-router-dom",
     "react-redux",
+    "react-redux-toolkit",
     "dotenv"
   ]
 }
