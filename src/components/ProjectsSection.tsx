@@ -21,12 +21,12 @@ const ProjectsSection = function () {
 
   return (
     <div className="projects">
+      <Separator />
       <h1 className="section-title">Projects</h1>
       <div className="project-container">
         {error ? <Error msg={errorMsg} link={errorLink} /> : ""}
         {loading ? <Loading /> : contentJSX}
       </div>
-      <Separator hide={true} />
     </div>
   );
 };

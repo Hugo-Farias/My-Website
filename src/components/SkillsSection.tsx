@@ -24,7 +24,6 @@ const SkillsSection = function () {
       <section className="skills-section">
         <div className="skills-grid">{contentJSX}</div>
       </section>
-      <Separator />
     </>
   );
 };

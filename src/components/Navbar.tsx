@@ -1,23 +1,20 @@
 import "./Navbar.scss";
-import { firstName, lastName } from "../data/sharedData.json";
 import { ReactComponent as GithubLogo } from "../assets/images/navicon-github.svg";
 import { ReactComponent as LinkedinLogo } from "../assets/images/navicon-linkedin.svg";
-import { navLinks } from "../data/sharedData.json";
+import { FIRST_NAME, LAST_NAME, GITHUB_URL, LINKEDIN_URL } from "../config";
 
 const Navbar = function () {
-  const { github, frontEndMentor, linkedIn } = navLinks;
-
   return (
     <nav className="nav">
       <div className="name">
-        <div className="first-name">{firstName}</div>
-        <div className="last-name">{lastName}</div>
+        <div className="first-name">{FIRST_NAME}</div>
+        <div className="last-name">{LAST_NAME}</div>
       </div>
       <div className="socials">
-        <a href={github} target="_blank">
+        <a href={GITHUB_URL} target="_blank">
           <GithubLogo className="navicon-github" />
         </a>
-        <a href={linkedIn} target="_blank">
+        <a href={LINKEDIN_URL} target="_blank">
           <LinkedinLogo className="navicon-linkedin" />
         </a>
       </div>

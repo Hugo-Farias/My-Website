@@ -4,14 +4,13 @@
   display: grid;
   place-content: center;
   position: relative;
-  //overflow-x: hidden;
   $offset-right: 0;
   $offset-left: 0;
   margin: 0 -#{$offset-right}rem -6rem -#{$offset-left}rem;
   padding: 0 #{$offset-right}rem 0 #{$offset-left}rem;
   text-align: center;
   min-height: 41rem;
-  height: 95vh;
+  height: 100vh;
 
   &::after {
     content: "";

@@ -64,6 +64,7 @@ const ContactSection = function () {
 
   return (
     <>
+      <Separator hide={true} />
       <div className="contact-section">
         <div className="cta-container">
           <h1 className="title">Contact</h1>

@@ -1,10 +1,9 @@
 import "./Hero.scss";
-import { firstName, lastName } from "../data/sharedData.json";
-import Separator from "./common/Separator";
 import Btn from "./common/Btn";
+import { FIRST_NAME, LAST_NAME } from "../config";
 
 const Hero = function () {
-  const fullName = `${firstName} ${lastName}`;
+  const fullName = `${FIRST_NAME} ${LAST_NAME}`;
 
   return (
     <>
@@ -24,7 +23,6 @@ const Hero = function () {
           </Btn>
         </div>
       </section>
-      <Separator />
     </>
   );
 };
