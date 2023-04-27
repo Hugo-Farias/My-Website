@@ -11,7 +11,6 @@ interface PropsT {
 }
 
 const SkillCard: React.FC<PropsT> = function ({ data }) {
-  // const { SvgIcon } = useImportSvg(`icon-colored-${data.image}`);
   const { SvgIcon } = useImportSvg(`icon-outlined-${data.image}`);
 
   if (!SvgIcon) return <Loading />;

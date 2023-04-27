@@ -3,19 +3,13 @@
 .skills-section {
   & .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: 0.1rem;
-    align-items: start;
-    justify-items: unset;
-    //justify-content: start;
-    //margin-inline: auto;
-    //max-width: 100rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-gap: 0.2rem;
+    justify-content: space-evenly;
 
-    @media (max-width: $screen-small) {
+    @media (min-width: $screen-small) {
       justify-content: center;
-      //justify-items: start;
-      grid-gap: 1rem 2rem;
-      grid-template-columns: repeat(auto-fit, 13rem);
+      grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     }
   }
 }
