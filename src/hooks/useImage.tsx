@@ -5,14 +5,12 @@ const useImage = function (filePath: string, fileExt?: string) {
   const [error, setError] = useState(null);
   const [path, setPath] = useState(null);
 
-  const newPath = `/assets/images/${filePath}.${fileExt}`;
-
-  console.log(newPath);
-
   useEffect(() => {
     const fetchImage = async () => {
       try {
-        const response = await import(newPath);
+        const response = await import(
+          /* @vite-ignore */ `./assets/images/${filePath}.${fileExt}`
+        );
         setPath(response.default);
       } catch (err: any) {
         setError(err);

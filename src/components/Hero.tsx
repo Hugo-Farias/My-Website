@@ -6,8 +6,6 @@ import Btn from "./common/Btn";
 const Hero = function () {
   const fullName = `${firstName} ${lastName}`;
 
-  console.log(document.body.scrollHeight - 1000);
-
   return (
     <>
       <section className="hero">
