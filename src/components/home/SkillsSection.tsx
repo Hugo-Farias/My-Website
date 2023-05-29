@@ -1,5 +1,5 @@
 import "./SkillsSection.scss";
-import Separator from "./common/Separator";
+import Separator from "../common/Separator";
 import SkillCard from "./SkillCard";
 
 const DUMMY_DATA = [

@@ -1,11 +1,11 @@
 import "./ProjectsSection.scss";
 import ProjectCard from "./ProjectCard";
-import Separator from "./common/Separator";
-import Loading from "./common/Loading";
-import Error from "./common/Error";
-import { githubApiData, projectItem, query } from "../../typeDefinitions";
-import { convertGithubData } from "../helpers";
-import { GITHUB_URL } from "../config";
+import Separator from "../common/Separator";
+import Loading from "../common/Loading";
+import Error from "../common/Error";
+import { githubApiData, projectItem, query } from "../../../typeDefinitions";
+import { convertGithubData } from "../../helpers";
+import { GITHUB_URL } from "../../config";
 
 interface Prop {
   query: query<githubApiData>;
@@ -17,7 +17,7 @@ const ProjectsSection = function ({ query }: Prop) {
   let contentJSX;
 
   if (data) {
-    contentJSX = convertGithubData(data)?.map((v: projectItem) => {
+    contentJSX = convertGithubData(data).map((v: projectItem) => {
       return <ProjectCard key={v.id} data={v} />;
     });
   } else if (error) {

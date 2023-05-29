@@ -1,8 +1,8 @@
 import "./ProjectCard.scss";
 import React, { useState } from "react";
-import Btn from "./common/Btn";
-import useImage from "../hooks/useImage";
-import { projectItem } from "../../typeDefinitions";
+import Btn from "../common/Btn";
+import useImage from "../../hooks/useImage";
+import { projectItem } from "../../../typeDefinitions";
 
 interface PropsT {
   data: projectItem;

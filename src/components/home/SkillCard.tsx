@@ -1,7 +1,7 @@
 import "./SkillCard.scss";
 import React from "react";
-import useImportSvg from "../hooks/useImportSvg";
-import Loading from "./common/Loading";
+import useImportSvg from "../../hooks/useImportSvg";
+import Loading from "../common/Loading";
 
 interface PropsT {
   data: {

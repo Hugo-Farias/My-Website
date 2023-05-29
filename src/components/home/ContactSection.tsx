@@ -1,9 +1,9 @@
 import "./ContactSection.scss";
-import Btn from "./common/Btn";
-import Separator from "./common/Separator";
+import Btn from "../common/Btn";
+import Separator from "../common/Separator";
 import Navbar from "./Navbar";
 import React, { useState, FormEvent, ChangeEvent } from "react";
-import FormInput from "./common/FormInput";
+import FormInput from "../common/FormInput";
 
 const web3formsToken = import.meta.env.VITE_REACT_APP_WEB3FORMS;
 

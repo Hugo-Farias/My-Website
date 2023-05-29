@@ -1,6 +1,6 @@
 import "./Hero.scss";
-import Btn from "./common/Btn";
-import { FIRST_NAME, LAST_NAME } from "../config";
+import Btn from "../common/Btn";
+import { FIRST_NAME, LAST_NAME } from "../../config";
 
 const Hero = function () {
   const fullName = `${FIRST_NAME} ${LAST_NAME}`;

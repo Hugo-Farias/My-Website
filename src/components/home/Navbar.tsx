@@ -1,7 +1,7 @@
 import "./Navbar.scss";
-import { ReactComponent as GithubLogo } from "../assets/images/navicon-github.svg";
-import { ReactComponent as LinkedinLogo } from "../assets/images/navicon-linkedin.svg";
-import { FIRST_NAME, LAST_NAME, GITHUB_URL, LINKEDIN_URL } from "../config";
+import { ReactComponent as GithubLogo } from "../../assets/images/navicon-github.svg";
+import { ReactComponent as LinkedinLogo } from "../../assets/images/navicon-linkedin.svg";
+import { FIRST_NAME, LAST_NAME, GITHUB_URL, LINKEDIN_URL } from "../../config";
 
 const Navbar = function () {
   return (

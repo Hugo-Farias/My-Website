@@ -4,6 +4,7 @@ import App from "./App";
 import "./index.scss";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import { GITHUB_GRAPHQL_URL } from "./config";
+import { BrowserRouter } from "react-router-dom";
 
 const client = new ApolloClient({
   uri: GITHUB_GRAPHQL_URL,
@@ -19,8 +20,10 @@ if (import.meta.hot) {
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
+    <BrowserRouter>
+      <ApolloProvider client={client}>
+        <App />
+      </ApolloProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
