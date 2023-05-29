@@ -1,15 +1,24 @@
 @import "../../variables";
 
 .modal {
-  color: $color-primary;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(30px);
+  @include flex-center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
   border-radius: 1rem;
-  height: 40rem;
+  width: 90%;
+  max-width: 80rem;
   aspect-ratio: 2;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+  overflow: hidden;
+
+  .image {
+    height: 100%;
+    aspect-ratio: 1.2;
+    object-fit: cover;
+  }
 }

@@ -42,7 +42,7 @@ const ProjectCard: React.FC<PropsT> = function ({ data }) {
         {buttonsContainer}
       </div>
       <div className="info">
-        <h4 className="name">{name}</h4>
+        <h4 className="name">{name.replaceAll("-", " ")}</h4>
         <p className="description">{description}</p>
         <div className="tech-container">
           {tech.map((value, index) => (

@@ -15,7 +15,7 @@ export const convertGithubData = function (data: githubApiData): projectItem[] {
 
     return {
       id: pinnedItem.id,
-      name: pinnedItem.name.replaceAll("-", " "),
+      name: pinnedItem.name,
       description: pinnedItem.description,
       image: pinnedItem.openGraphImageUrl,
       tech: techArray,
