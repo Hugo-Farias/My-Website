@@ -1,3 +1,5 @@
+import { ApolloError } from "@apollo/client";
+
 export interface PinnedItem {
   name: string;
   openGraphImageUrl: string;
@@ -26,6 +28,12 @@ export interface githubApiData {
       nodes: PinnedItem[];
     };
   };
+}
+
+export interface query<TData> {
+  data: TData | undefined;
+  loading: boolean;
+  error?: ApolloError;
 }
 
 export interface projectItem {
