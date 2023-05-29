@@ -28,10 +28,6 @@ export interface githubApiData {
   };
 }
 
-export interface UserPinnedItems {
-  nodes: PinnedItem[];
-}
-
 export interface projectItem {
   id: string;
   name: string;

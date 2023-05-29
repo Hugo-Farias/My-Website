@@ -3,14 +3,25 @@ import ProjectCard from "./ProjectCard";
 import Separator from "./common/Separator";
 import Loading from "./common/Loading";
 import Error from "./common/Error";
-import { useQuery } from "@apollo/client";
-import { pinnedRepositories } from "../graphql/PinnedRepositories.graphql";
-import { projectItem } from "../../typeDefinitions";
+import { githubApiData, projectItem } from "../../typeDefinitions";
 import { convertGithubData } from "../helpers";
 import { GITHUB_URL } from "../config";
 
-const ProjectsSection = function () {
-  const { data, loading, error } = useQuery(pinnedRepositories);
+interface query {
+  query: {
+    data: githubApiData;
+    loading: boolean;
+    error?: {
+      message: string;
+      name: string;
+      statusCode?: number;
+      response?: any;
+    };
+  };
+}
+
+const ProjectsSection = function ({ query }: query) {
+  const { data, loading, error } = query;
 
   const errorMsg = `GithubAPI: ${error?.message}`;
   const errorLink = { label: "Check my github page", url: GITHUB_URL };
