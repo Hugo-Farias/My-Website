@@ -12,24 +12,27 @@ const Modal = function (prop: prop) {
 
   const location = useLocation().pathname.slice(1);
   const projectNames = prop.data?.user.pinnedItems.nodes.map((v) => v.name);
-  console.log("-> projectNames", projectNames);
   const isValidPath = projectNames.includes(location);
-  console.log("-> isValidPath", isValidPath);
 
   if (!isValidPath) return null;
 
-  const [image] = convertGithubData(prop.data).filter((v) => {
-    console.log(v.name);
-    return v.name === location;
-  });
-
-  console.log(image);
+  const [{ image, description, name, codeLink, projectLink }] =
+    convertGithubData(prop.data).filter((v) => {
+      return v.name === location;
+    });
 
   return (
-    <div className="modal">
-      {/*<img src={image} className="image" alt="project image" />*/}
-      <div className="description">test</div>
-    </div>
+    <>
+      <div className="modal-backdrop" onClick={() => console.log("hit")} />
+      <div className="modal">
+        <span className="close-button">&times;</span>
+        <img src={image} className="image" alt="project image" />
+        <div className="info">
+          <h1 className="name">{name}</h1>
+          <h2 className="description">{description}</h2>
+        </div>
+      </div>
+    </>
   );
 };
 
