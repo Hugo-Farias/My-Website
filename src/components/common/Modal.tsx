@@ -1,5 +1,5 @@
 import "./Modal.scss";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { githubApiData } from "../../../typeDefinitions";
 import { convertGithubData } from "../../helpers";
 import Btn from "./Btn";
@@ -9,13 +9,20 @@ interface prop {
 }
 
 const Modal = function (prop: prop) {
+  //keep hooks before if statement or react will cry about it
+  const navigate = useNavigate();
+  const location = useLocation().pathname.slice(1);
+
   if (!prop.data) return null;
 
-  const location = useLocation().pathname.slice(1);
   const projectNames = prop.data?.user.pinnedItems.nodes.map((v) => v.name);
   const isValidPath = projectNames.includes(location);
 
   if (!isValidPath) return null;
+
+  const resetURL = () => {
+    navigate("/");
+  };
 
   const [{ image, description, name, codeLink, projectLink }] =
     convertGithubData(prop.data).filter((v) => {
@@ -24,9 +31,11 @@ const Modal = function (prop: prop) {
 
   return (
     <>
-      <div className="modal-backdrop" onClick={() => console.log("hit")} />
+      <div className="modal-backdrop" onClick={resetURL} />
       <div className="modal">
-        <span className="close-button">&times;</span>
+        <span className="close-button" onClick={resetURL}>
+          &times;
+        </span>
         <img src={image} className="image" alt="project image" />
         <div className="info">
           <h1 className="name">{name.replaceAll("-", " ")}</h1>
