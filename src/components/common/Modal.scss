@@ -1,7 +1,6 @@
 @import "../../variables";
 
 .modal {
-  @include flex-center;
   //flex-wrap: wrap;
   position: fixed;
   transition: transform 0.3s ease-in-out;
@@ -9,9 +8,7 @@
   backdrop-filter: blur(40px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 1rem;
-  width: 98%;
-  max-width: 100rem;
-  height: 35rem;
+  //max-width: 100rem;
   //aspect-ratio: 2.8;
   left: 50%;
   top: 50%;
@@ -19,14 +16,7 @@
   z-index: 10;
   overflow: hidden;
 
-  @media (max-width: $screen-small) {
-    flex-direction: column;
-    width: 60%;
-    min-width: 32rem;
-    height: 60rem;
-  }
-
-  .close-button {
+  & .close-button {
     position: absolute;
     top: 0;
     right: 0;
@@ -38,48 +28,6 @@
     border-radius: 0.3rem;
     padding-inline: 1rem;
     z-index: 20;
-  }
-
-  .image {
-    width: 50vw;
-    height: 100%;
-    max-width: 50rem;
-    object-fit: cover;
-    @media (max-width: $screen-small) {
-      width: 100%;
-    }
-  }
-
-  .info {
-    flex-grow: 1;
-    position: relative;
-    padding: 2rem;
-    height: 100%;
-    align-self: flex-start;
-    @media (max-width: $screen-small) {
-      align-self: center;
-    }
-    .name {
-      text-align: center;
-      text-transform: capitalize;
-      font-size: 2.8rem;
-      margin-bottom: 2rem;
-    }
-
-    .description {
-      text-align: center;
-      font-size: 1.6rem;
-    }
-  }
-
-  .buttons {
-    @include flex-center;
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
-    justify-content: center;
-    gap: 2rem;
   }
 
   &.closed {

@@ -8,6 +8,7 @@ import ContactSection from "./components/home/ContactSection";
 import { useQuery } from "@apollo/client";
 import { pinnedRepositories } from "./graphql/PinnedRepositories.graphql";
 import { githubApiData, query } from "../typeDefinitions";
+import ProjectModal from "./components/home/ProjectModal";
 
 function App() {
   const query: query<githubApiData> = useQuery(pinnedRepositories);
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="app">
       <Navbar />
-      <Modal data={query.data} />
+      <ProjectModal data={query.data} />
       <Hero />
       <SkillsSection />
       <ProjectsSection query={query} />
