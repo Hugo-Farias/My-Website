@@ -4,8 +4,9 @@
   @include flex-center;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 1rem;
-  width: 100%;
+  width: 95vw;
   max-width: 100rem;
+  min-width: 50rem;
   height: 35rem;
   //aspect-ratio: 2.8;
 
@@ -17,7 +18,7 @@
   }
 
   & .image {
-    width: 50vw;
+    width: 48vw;
     height: 100%;
     max-width: 50rem;
     object-fit: cover;
