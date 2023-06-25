@@ -1,7 +1,6 @@
 import "./App.scss";
 import Navbar from "./components/home/Navbar";
 import Hero from "./components/home/Hero";
-import Modal from "./components/common/Modal";
 import SkillsSection from "./components/home/SkillsSection";
 import ProjectsSection from "./components/home/ProjectsSection";
 import ContactSection from "./components/home/ContactSection";

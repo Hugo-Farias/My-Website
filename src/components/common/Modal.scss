@@ -35,11 +35,11 @@
 }
 
 .modal-backdrop {
-  transition: all 0.3s ease-in-out;
-  transition-property: background-color, backdrop-filter;
+  //transition: all 0.3s ease-in-out;
+  //transition-property: background-color, backdrop-filter;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.28);
-  //backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
   top: 0;
   left: 0;
   height: 100%;
