@@ -3,7 +3,7 @@
 .button {
   @mixin transitionProps($delay) {
     transition: all 0.3s, background #{$delay}s;
-    transition-property: color, margin;
+    transition-property: color, margin, background;
   }
   text-align: center;
   cursor: pointer;
@@ -37,6 +37,6 @@
   }
 
   &.open {
-    margin-bottom: 3rem;
+    margin-bottom: 8rem;
   }
 }

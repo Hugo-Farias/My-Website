@@ -28,7 +28,8 @@ const Hero = function () {
             >
               Curriculum Vitae
             </Btn>
-            {cv ? <CVSection /> : ""}
+            {/*{cv ? <CVSection status={cv} /> : ""}*/}
+            <CVSection status={cv} />
             <Btn onClick={() => window.scrollTo(0, document.body.scrollHeight)}>
               Contact Me
             </Btn>

@@ -1,7 +1,17 @@
 import "./CVSection.scss";
+import Btn from "../common/Btn";
 
-const CVSection = function () {
-  return <div className="cv-section">TEST</div>;
+interface prop {
+  status: string;
+}
+
+const CVSection = function ({ status }: prop) {
+  return (
+    <div className={`cv-section ${status}`}>
+      <Btn onClick={() => {}}>En</Btn>
+      <Btn onClick={() => {}}>Pt-Br</Btn>
+    </div>
+  );
 };
 
 export default CVSection;
