@@ -2,7 +2,8 @@
 
 .button {
   @mixin transitionProps($delay) {
-    transition: color 0.3s, background #{$delay}s;
+    transition: all 0.3s, background #{$delay}s;
+    transition-property: color, margin;
   }
   text-align: center;
   cursor: pointer;
@@ -16,6 +17,7 @@
   letter-spacing: 0.23rem;
   padding: 0.5rem 1rem;
   border-radius: 0.15rem;
+  width: 100%;
   @include transitionProps(0.5);
   background: linear-gradient(
       to bottom,
@@ -32,5 +34,9 @@
     //transition: background 0.2s;
     background-position: bottom;
     color: invert($color-font);
+  }
+
+  &.open {
+    margin-bottom: 3rem;
   }
 }

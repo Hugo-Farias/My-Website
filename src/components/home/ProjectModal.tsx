@@ -16,6 +16,7 @@ const ProjectModal = function (prop: prop) {
   const resetURL = () => {
     navigate("/");
   };
+
   const location = useLocation().pathname.slice(1);
 
   if (!prop.data) return null;

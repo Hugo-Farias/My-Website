@@ -4,21 +4,28 @@ import React from "react";
 interface PropsT {
   link?: string | null;
   target?: string;
+  status?: string;
   onClick?: () => void;
   children: React.ReactNode;
 }
 
-const Btn: React.FC<PropsT> = function ({ children, link, onClick, target }) {
+const Btn: React.FC<PropsT> = function ({
+  children,
+  link,
+  onClick,
+  target,
+  status,
+}) {
   if (link)
     return (
-      <a href={link} target={target} className="button">
+      <a href={link} target={target} className={`button ${status}`}>
         {children}
       </a>
     );
 
   if (onClick)
     return (
-      <button onClick={onClick} className="button">
+      <button onClick={onClick} className={`button ${status}`}>
         {children}
       </button>
     );

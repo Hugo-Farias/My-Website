@@ -74,5 +74,11 @@
       padding: 3rem 0;
       //max-width: 50rem;
     }
+
+    & .buttons {
+      @include flex-center;
+      gap: 2rem;
+      flex-direction: column;
+    }
   }
 }
