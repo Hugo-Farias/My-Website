@@ -3,7 +3,7 @@
 .button {
   @mixin transitionProps($delay) {
     transition: all 0.3s, background #{$delay}s;
-    transition-property: color, margin, background;
+    transition-property: background-color, color, margin;
   }
   text-align: center;
   cursor: pointer;
@@ -19,20 +19,21 @@
   border-radius: 0.15rem;
   width: 100%;
   @include transitionProps(0.5);
-  background: linear-gradient(
-      to bottom,
-      $color-primary 50%,
-      lighten($color-secondary, 20) 0%
-    )
-    repeat top;
-  background-size: auto 200%;
+  background-color: $color-primary;
+  //background: linear-gradient(
+  //    to bottom,
+  //    $color-primary 50%,
+  //    lighten($color-secondary, 20) 0%
+  //  )
+  //  repeat top;
+  //background-size: auto 200%;
   color: $color-font;
 
   &:hover,
   &:active {
     @include transitionProps(0.2);
-    //transition: background 0.2s;
-    background-position: bottom;
+    //background-position: bottom;
+    background-color: lighten($color-secondary, 20);
     color: invert($color-font);
   }
 

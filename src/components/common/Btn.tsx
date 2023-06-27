@@ -18,14 +18,18 @@ const Btn: React.FC<PropsT> = function ({
 }) {
   if (link)
     return (
-      <a href={link} target={target} className={`button ${status}`}>
+      <a
+        href={link}
+        target={target}
+        className={`button ${status ? status : ""}`}
+      >
         {children}
       </a>
     );
 
   if (onClick)
     return (
-      <button onClick={onClick} className={`button ${status}`}>
+      <button onClick={onClick} className={`button ${status ? status : ""}`}>
         {children}
       </button>
     );
