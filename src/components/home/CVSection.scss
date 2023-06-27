@@ -1,6 +1,7 @@
 @import "../../variables";
 
-@mixin transition-props {
+@mixin transition($delay) {
+  transition: all ease-in-out #{$delay}s;
   transition-property: height, opacity;
 }
 
@@ -9,22 +10,18 @@
   gap: 3rem;
   position: absolute;
   visibility: hidden;
-  transition: all ease-in-out 0.2s;
-  @include transition-props;
   opacity: 0;
+  @include transition(0.2);
   background-color: rgba(0, 0, 0, 0.6);
-  width: 30%;
-  height: 0;
-  //height: 10rem;
+  width: 23rem;
   border-radius: 0.5rem;
   border: solid 1px rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  padding: 1rem;
 
   &.true {
-    transition: all ease-in-out 0.5s;
-    @include transition-props;
+    @include transition(0.5);
     opacity: 1;
-    padding: 1rem;
-    height: auto;
     visibility: visible;
   }
 }

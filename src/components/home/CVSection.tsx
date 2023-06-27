@@ -2,7 +2,7 @@ import "./CVSection.scss";
 import Btn from "../common/Btn";
 
 interface prop {
-  status: string;
+  status: boolean;
 }
 
 const CVSection = function ({ status }: prop) {

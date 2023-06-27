@@ -3,9 +3,9 @@ import React from "react";
 
 interface PropsT {
   link?: string | null;
+  onClick?: () => void;
   target?: string;
   status?: string;
-  onClick?: () => void;
   children: React.ReactNode;
 }
 
