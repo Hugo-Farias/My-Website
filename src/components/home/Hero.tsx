@@ -5,7 +5,7 @@ import { useState } from "react";
 import CVSection from "./CVSection";
 
 const Hero = function () {
-  const [cv, setCv] = useState(true);
+  const [cv, setCv] = useState(false);
   const fullName = `${FIRST_NAME} ${LAST_NAME}`;
 
   return (

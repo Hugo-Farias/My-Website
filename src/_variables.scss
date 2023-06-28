@@ -30,6 +30,57 @@ $screen-big: 1000+1px;
   }
 }
 
+//Animations
+@keyframes shake {
+  0%,
+  60% {
+    transform: translateX(0.5rem);
+  }
+  40%,
+  80% {
+    transform: translateX(-0.5rem);
+  }
+}
+
+@keyframes slow-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-1%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(1%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 //Fonts
 @font-face {
   font-family: Space;
