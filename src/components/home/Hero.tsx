@@ -18,18 +18,18 @@ const Hero = function () {
           </h1>
 
           <p className="description">
-            A bilingual front-end developer passionate about building web apps.
+            A bilingual developer passionate about building web apps.
           </p>
 
           <div className="buttons">
-            <Btn
-              status={cv ? "open" : ""}
-              onClick={() => setCv((prev) => !prev)}
-            >
-              Curriculum Vitae
-            </Btn>
+            {/*  <Btn*/}
+            {/*    status={cv ? "open" : ""}*/}
+            {/*    onClick={() => setCv((prev) => !prev)}*/}
+            {/*  >*/}
+            {/*    Curriculum Vitae*/}
+            {/*  </Btn>*/}
             {/*{cv ? <CVSection status={cv} /> : ""}*/}
-            <CVSection status={cv} />
+            {/*<CVSection status={cv} />*/}
             <Btn onClick={() => window.scrollTo(0, document.body.scrollHeight)}>
               Contact Me
             </Btn>
