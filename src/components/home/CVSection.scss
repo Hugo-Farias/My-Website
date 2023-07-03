@@ -1,7 +1,7 @@
 @import "../../variables";
 
-@mixin transition($delay) {
-  transition: all ease-in-out #{$delay}s;
+@mixin transition($duration) {
+  transition: all ease-in-out #{$duration}s;
   transition-property: height, opacity;
 }
 

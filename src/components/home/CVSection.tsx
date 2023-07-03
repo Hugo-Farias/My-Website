@@ -7,6 +7,7 @@ interface prop {
 
 const CVSection = function ({ status }: prop) {
   const fileName = "hugo-rodrigues-farias_";
+
   return (
     <div className={`cv-section ${status}`}>
       <Btn onClick={() => console.log(fileName + "en")}>En</Btn>

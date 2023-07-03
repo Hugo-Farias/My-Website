@@ -14,6 +14,7 @@
   }
 
   & > svg {
+    filter: invert(90%);
     width: 3.4rem;
     height: 3.4rem;
     //order: 1;

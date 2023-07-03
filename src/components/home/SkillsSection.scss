@@ -8,6 +8,8 @@
     justify-content: space-evenly;
 
     @media (min-width: $screen-small) {
+      max-width: 80rem;
+      margin-inline: auto;
       justify-content: center;
       grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     }

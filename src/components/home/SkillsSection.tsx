@@ -1,5 +1,4 @@
 import "./SkillsSection.scss";
-import Separator from "../common/Separator";
 import SkillCard from "./SkillCard";
 
 const DUMMY_DATA = [
@@ -11,7 +10,7 @@ const DUMMY_DATA = [
   { name: "SASS/SCSS", image: "sass" },
   { name: "Python", image: "python" },
   { name: "Git", image: "git" },
-  { name: "Bash", image: "bash" },
+  // { name: "Bash", image: "bash" },
 ];
 
 const SkillsSection = function () {
