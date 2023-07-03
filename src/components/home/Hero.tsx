@@ -22,15 +22,19 @@ const Hero = function () {
           </p>
 
           <div className="buttons">
-            {/*  <Btn*/}
-            {/*    status={cv ? "open" : ""}*/}
-            {/*    onClick={() => setCv((prev) => !prev)}*/}
-            {/*  >*/}
-            {/*    Curriculum Vitae*/}
-            {/*  </Btn>*/}
+            <Btn
+              status={cv ? "open" : ""}
+              onClick={() => setCv((prev) => !prev)}
+            >
+              Curriculum Vitae
+            </Btn>
             {/*{cv ? <CVSection status={cv} /> : ""}*/}
-            {/*<CVSection status={cv} />*/}
-            <Btn onClick={() => window.scrollTo(0, document.body.scrollHeight)}>
+            <CVSection status={cv} />
+            <Btn
+              onClick={() =>
+                window.scrollTo(0, document.body.scrollHeight - 720)
+              }
+            >
               Contact Me
             </Btn>
           </div>
