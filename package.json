@@ -1,7 +1,7 @@
 {
   "name": "single-page-developer-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.5.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,13 +10,13 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.11",
+    "@types/react-transition-group": "^4.4.6",
     "dotenv": "^16.0.3",
     "graphql": "^16.6.0",
     "graphql-tag": "^2.12.6",
     "pdfjs": "^2.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-query": "^3.39.3",
     "react-router-dom": "^6.11.2",
     "react-transition-group": "^4.4.5",
     "sass": "^1.59.3",
