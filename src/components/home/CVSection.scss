@@ -24,4 +24,10 @@
     opacity: 1;
     visibility: visible;
   }
+
+  & .cv-content {
+    min-height: 9vh;
+    max-height: 1rem;
+    aspect-ratio: 1.3;
+  }
 }

@@ -2,8 +2,6 @@
 
 .project-modal {
   @include flex-center;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 1rem;
   width: 95vw;
   max-width: 100rem;
   min-width: 50rem;
@@ -14,7 +12,7 @@
     flex-direction: column;
     width: 60%;
     min-width: 32rem;
-    height: 60rem;
+    min-height: 60rem;
   }
 
   & .image {

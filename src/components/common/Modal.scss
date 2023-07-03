@@ -16,9 +16,10 @@
 }
 
 .modal {
-  animation: slide-down 0.4s forwards;
+  animation: slide-down 0.4s;
   position: fixed;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  transition-property: transform, opacity;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(40px);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -28,7 +29,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
+  z-index: 15;
   overflow: hidden;
 
   & .close-button {
@@ -46,24 +47,29 @@
     z-index: 20;
   }
 
-  &.closed {
-    transform: translate(-50%, -200%);
+  &.closed,
+  &.exit {
+    transform: translate(-50%, -80%);
+    //animation: slide-down 0.5s reverse;
+    opacity: 0;
+    //translate: 40%;
   }
 }
 
 .modal-backdrop {
-  //transition: all 0.3s ease-in-out;
-  //transition-property: background-color, backdrop-filter;
+  filter: blur(30px);
+  transition: all 0.3s ease-in-out;
+  transition-property: background-color, backdrop-filter;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 9;
+  z-index: 10;
 
-  &.closed {
+  &.closed,
+  .modal.exit + & {
     background-color: unset;
     backdrop-filter: unset;
   }

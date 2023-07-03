@@ -5,6 +5,7 @@ import { githubApiData } from "../../../typeDefinitions";
 import { convertGithubData } from "../../helpers";
 import { useLocation, useNavigate } from "react-router-dom";
 import Modal from "../common/Modal";
+import { SwitchTransition } from "react-transition-group";
 
 interface prop {
   data: githubApiData | undefined;

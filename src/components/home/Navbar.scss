@@ -16,7 +16,7 @@
   & .name {
     display: inline-flex;
     text-transform: lowercase;
-    z-index: inherit;
+    //z-index: inherit;
     font-size: 2.4rem;
     font-weight: bold;
 
@@ -27,7 +27,7 @@
 
   & > .socials {
     @include flex-center;
-    z-index: inherit;
+    //z-index: inherit;
     gap: 2.5rem;
 
     a {

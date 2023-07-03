@@ -16,13 +16,10 @@ const CVSection = function ({ status }: prop) {
     <div className={`cv-section ${status}`}>
       <Btn onClick={() => setCvModal(true)}>En</Btn>
       <Btn onClick={() => setCvModal(true)}>Pt-Br</Btn>
-      <CSSTransition
-        in={cvModal}
-        timeout={1000}
-        classNames="fade"
-        unmountOnExit
-      >
-        <Modal close={() => setCvModal(false)}>whatever</Modal>
+      <CSSTransition in={cvModal} timeout={300} unmountOnExit>
+        <Modal close={() => setCvModal(false)}>
+          <div className="cv-content"></div>
+        </Modal>
       </CSSTransition>
     </div>
   );

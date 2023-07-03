@@ -11,13 +11,13 @@ const Modal = function (prop: prop) {
 
   return (
     <>
-      <div className="modal-backdrop" onClick={close} />
       <div className="modal">
         <span className="close-button" onClick={close}>
           &times;
         </span>
         {children}
       </div>
+      <div className="modal-backdrop" onClick={close} />
     </>
   );
 };
