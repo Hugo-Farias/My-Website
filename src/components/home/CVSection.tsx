@@ -12,13 +12,12 @@ interface prop {
 
 const CVSection = function ({ status }: prop) {
   const [cvModal, setCvModal] = useState<boolean>(false);
-  const [cvDoc, setCvDoc] = useState<string>(cvEn);
+  const [cvLang, setCvLang] = useState<"en" | "pt">("en");
 
   const handleOpenCv = function (lang: "en" | "pt") {
     setCvModal(true);
     document.body.style.overflow = "hidden";
-    if (lang === "en") return setCvDoc(cvEn);
-    setCvDoc(cvPt);
+    setCvLang(lang);
   };
 
   const handleCloseCv = function () {
@@ -32,7 +31,7 @@ const CVSection = function ({ status }: prop) {
       <Btn onClick={handleOpenCv.bind(null, "pt")}>Pt-Br</Btn>
       <CSSTransition in={cvModal} timeout={300} unmountOnExit>
         <Modal close={handleCloseCv}>
-          <embed src={cvDoc} type="application/pdf" />
+          <embed src={cvLang === "en" ? cvEn : cvPt} type="application/pdf" />
         </Modal>
       </CSSTransition>
     </div>
