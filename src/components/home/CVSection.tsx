@@ -14,20 +14,24 @@ const CVSection = function ({ status }: prop) {
   const [cvModal, setCvModal] = useState<boolean>(false);
   const [cvDoc, setCvDoc] = useState<string>(cvEn);
 
-  const handleCv = function (lang: "en" | "pt") {
+  const handleOpenCv = function (lang: "en" | "pt") {
     setCvModal(true);
-
+    document.body.style.overflow = "hidden";
     if (lang === "en") return setCvDoc(cvEn);
-
     setCvDoc(cvPt);
+  };
+
+  const handleCloseCv = function () {
+    setCvModal(false);
+    document.body.style.overflow = "auto";
   };
 
   return (
     <div className={`cv-section ${status}`}>
-      <Btn onClick={handleCv.bind(null, "en")}>En</Btn>
-      <Btn onClick={handleCv.bind(null, "pt")}>Pt-Br</Btn>
+      <Btn onClick={handleOpenCv.bind(null, "en")}>En</Btn>
+      <Btn onClick={handleOpenCv.bind(null, "pt")}>Pt-Br</Btn>
       <CSSTransition in={cvModal} timeout={300} unmountOnExit>
-        <Modal close={() => setCvModal(false)}>
+        <Modal close={handleCloseCv}>
           <embed src={cvDoc} type="application/pdf" />
         </Modal>
       </CSSTransition>
