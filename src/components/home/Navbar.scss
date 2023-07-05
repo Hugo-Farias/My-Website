@@ -39,7 +39,7 @@
 
       &:hover,
       &:focus {
-        fill: lighten($color-secondary, 20);
+        fill: $color-secondary;
         //fill: $color-primary;
       }
     }
