@@ -27,9 +27,9 @@
 
   & embed {
     $border: 0;
-    padding: 4rem #{$border}rem #{$border}rem #{$border}rem;
-    min-width: 90vw;
-    min-height: 90vh;
+    padding: 4rem #{$border}rem #{$border}rem 0;
+    width: 90vw;
     max-width: 83.6rem;
+    min-height: 90vh;
   }
 }
