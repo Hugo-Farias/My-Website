@@ -33,7 +33,7 @@
   &:active {
     @include transitionProps(0.2);
     //background-position: bottom;
-    background-color: lighten($color-secondary, 20);
+    background-color: $color-secondary;
     color: invert($color-font);
   }
 

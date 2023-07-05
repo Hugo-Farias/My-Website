@@ -25,9 +25,11 @@
     visibility: visible;
   }
 
-  & .cv-content {
-    min-height: 9vh;
-    max-height: 1rem;
-    aspect-ratio: 1.3;
+  & embed {
+    $border: 0;
+    padding: 4rem #{$border}rem #{$border}rem #{$border}rem;
+    min-width: 90vw;
+    min-height: 90vh;
+    max-width: 83.6rem;
   }
 }

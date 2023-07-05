@@ -45,6 +45,10 @@
     border-radius: 0.5rem;
     padding-inline: 1rem;
     z-index: 20;
+
+    &:hover {
+      color: $color-secondary;
+    }
   }
 
   &.closed,

@@ -33,7 +33,7 @@
     aspect-ratio: 1/2;
     filter: blur(30rem);
     border-radius: 50%;
-    background-color: rgba($color-secondary, 90%);
+    background-color: darken($color-secondary, 30);
     //background-position: left 0;
     z-index: -999;
     right: 0;
