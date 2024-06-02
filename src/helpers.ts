@@ -1,5 +1,5 @@
 import { githubApiData, PinnedItem, projectItem } from "../typeDefinitions";
-import { techList } from "./data/sharedData.json";
+//import { techList } from "./data/sharedData.json";
 
 export const convertGithubData = function (data: githubApiData): projectItem[] {
   return data?.user.pinnedItems.nodes.map((pinnedItem: PinnedItem) => {
@@ -9,8 +9,7 @@ export const convertGithubData = function (data: githubApiData): projectItem[] {
 
     if (topics.length > 0) {
       techArray = topics
-        .map((v) => v.topic.name)
-        .filter((v) => techList.includes(v));
+        .map((v) => v.topic.name)        
     }
 
     return {
