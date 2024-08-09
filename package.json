@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "git" : "git add -A && tsc && git commit -m",
+    "git": "git add -A && tsc && git commit -m",
     "postgit": "git push",
     "build": "tsc && vite build",
     "preview": "vite preview"
@@ -17,19 +17,20 @@
     "react-router-dom": "^6.11.2"
   },
   "devDependencies": {
-    "react-transition-group": "^4.4.5",
-    "sass": "^1.59.3",
-    "vite-plugin-svgr": "^2.4.0",
-    "graphql": "^16.6.0",
-    "graphql-tag": "^2.12.6",
-    "pdfjs": "^2.5.0",
     "@apollo/client": "^3.7.11",
-    "@types/react-transition-group": "^4.4.6",
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@types/react-transition-group": "^4.4.6",
     "@vitejs/plugin-react": "^3.1.0",
+    "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6",
+    "pdfjs": "^2.5.0",
+    "prettier": "^3.3.3",
+    "react-transition-group": "^4.4.5",
+    "sass": "^1.59.3",
     "typescript": "^4.9.3",
-    "vite": "^4.2.0"
+    "vite": "^4.2.0",
+    "vite-plugin-svgr": "^2.4.0"
   }
 }

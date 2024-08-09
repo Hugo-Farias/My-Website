@@ -1,5 +1,5 @@
 import "./Modal.scss";
-import React from "react";
+import React, { useEffect } from "react";
 
 interface prop {
   close: () => void;
@@ -9,6 +9,18 @@ interface prop {
 
 const Modal = function (prop: prop) {
   const { close, children, hideCloseBtn } = prop;
+
+  const handleKeyPress = function (e: KeyboardEvent) {
+    if (!["Escape", "Enter", "Backspace"].some((v) => v === e.key)) return null;
+
+    close();
+  };
+
+  useEffect(() => {
+    document.addEventListener("keyup", handleKeyPress);
+
+    return () => document.removeEventListener("keyup", handleKeyPress);
+  }, []);
 
   return (
     <>
