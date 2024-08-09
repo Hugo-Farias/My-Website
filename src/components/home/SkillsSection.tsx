@@ -10,7 +10,8 @@ const DUMMY_DATA = [
   { name: "SASS/SCSS", image: "sass" },
   { name: "Python", image: "python" },
   { name: "Git", image: "git" },
-  // { name: "Bash", image: "bash" },
+  {name: "TailwindCSS", image: "tailwind" },
+  { name: "Bash", image: "bash" },
 ];
 
 const SkillsSection = function () {

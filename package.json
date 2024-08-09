@@ -5,24 +5,26 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "git" : "git add -A && tsc && git commit -m",
+    "postgit": "git push",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.11",
-    "@types/react-transition-group": "^4.4.6",
     "dotenv": "^16.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.2"
+  },
+  "devDependencies": {
+    "react-transition-group": "^4.4.5",
+    "sass": "^1.59.3",
+    "vite-plugin-svgr": "^2.4.0",
     "graphql": "^16.6.0",
     "graphql-tag": "^2.12.6",
     "pdfjs": "^2.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.2",
-    "react-transition-group": "^4.4.5",
-    "sass": "^1.59.3",
-    "vite-plugin-svgr": "^2.4.0"
-  },
-  "devDependencies": {
+    "@apollo/client": "^3.7.11",
+    "@types/react-transition-group": "^4.4.6",
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
