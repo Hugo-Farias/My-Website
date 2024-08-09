@@ -1,5 +1,5 @@
 import "./CVSection.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Btn from "../common/Btn";
 import { CSSTransition } from "react-transition-group";
 import Modal from "../common/Modal";

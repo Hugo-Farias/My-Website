@@ -18,7 +18,7 @@ const Hero = function () {
           </h1>
 
           <p className="description">
-            A bilingual developer passionate about building web apps.
+            A developer passionate about building web apps.
           </p>
 
           <div className="buttons">
@@ -28,7 +28,6 @@ const Hero = function () {
             >
               Curriculum Vitae
             </Btn>
-            {/*{cv ? <CVSection status={cv} /> : ""}*/}
             <CVSection status={cv} />
             <Btn
               onClick={() =>
