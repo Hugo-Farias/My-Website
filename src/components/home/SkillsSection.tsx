@@ -8,7 +8,7 @@ const DUMMY_DATA = [
   { name: "Typescript", image: "typescript" },
   { name: "React", image: "react" },
   {name: "TailwindCSS", image: "tailwind" },
-  { name: "SASS/SCSS", image: "sass" },
+  { name: "SASS", image: "sass" },
   { name: "Python", image: "python" },
   // { name: "Git", image: "git" },
   // { name: "Bash", image: "bash" },
