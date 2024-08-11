@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "git": "git add -A && tsc && git commit -m",
+    "git": "git add -A && tsc --noemit && git commit -m",
     "postgit": "git push",
     "build": "tsc && vite build",
     "preview": "vite preview"

@@ -17,9 +17,9 @@ const Modal = function (prop: prop) {
   };
 
   useEffect(() => {
-    document.addEventListener("keyup", handleKeyPress);
+    document.addEventListener("keydown", handleKeyPress);
 
-    return () => document.removeEventListener("keyup", handleKeyPress);
+    return () => document.removeEventListener("keydown", handleKeyPress);
   }, []);
 
   return (
